@@ -66,13 +66,13 @@ x.addListener(myFunction) // Attach listener function on state changes
   .fromTo('.hi-txt',5,{opacity:1},{y:-10 , opacity:0, ease:'power2.out'})
    .fromTo('.intro h2',5,{opacity:1},{y:-10 , opacity:0, ease:'power2.out'})
    .fromTo('.intro p',15,{opacity:1},{y:-10 , opacity:0, ease:'power2.out'})
-   .fromTo('.img-container',20,{y:600},{ y:200,ease:"power2.out"})
-   .to('.big-text',{position:'fixed'})
+   .fromTo('.img-container',20,{y:600},{ y:100,ease:"power2.out"})
    .to('#zoomText',{background:"#0D0C0C"})
    .fromTo('#zoomText',50,{display:'none'},{display:'flex',scale:1, ease:"power4.out"})
    .to('.mid-text',{ y:-40, position:"absolute", opacity:1, ease:"power4.out"})
    .to('.apply-txt',10,{ opacity:1}) 
    .to('.soon',10 ,{ opacity:1})    
    .to('#zoomText',{duration:10, mixBlendMode:'normal', ease:"power3.out"})
-   .fromTo('.img-container',{display:'flex'},{ display:'none',ease:"power2.out"});
+   .fromTo('.img-container',{y:200},{ y:0,ease:"power2.out"})
+   .fromTo('.copyright',5,{opacity:0},{ opacity:1,ease:"power2.out"});
 
