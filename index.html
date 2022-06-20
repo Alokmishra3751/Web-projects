@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Seriamigo - explore world !</title>
 
-  <link href="https://fonts.googleapis.com/css2?family=Bona+Nova:wght@400;700&family=Poppins&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Bona+Nova:wght@400;700&family=Poppins&family=Oswald&display=swap" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
@@ -23,486 +23,273 @@
   		font-family: 'Poppins', sans-serif;
   		
   	}
-	
-  	.hero-banner {
-  position: relative;
-  width: 100vw;
-  overflow: hidden;
- 	
-}
- .bg-effect{
-	position:relative;
-	height:100vh;
+  	.main-wrapper{
+  		height:100%;
+  	}
+  	#net{
+  		position:fixed;
+  		top:0;
+  		left:0;
+  		z-index:0;
+  		width:100%;
+  		height:100%;
+  		overflow:hidden;
+  	}
+  	
+  	.intro{
+  		position:relative;
+  		z-index:2;
+  		width:100%;
+  		height:100vh;
+  		display:flex;
+  		flex-direction:column;
+  		justify-content:center;
+  		align-items:center;
+  		overflow:hidden;
 
-}
-.intro{
-	position:relative;
-	top:50%;
-	left:0;
-	max-width:800px;
-	padding-left:80px;
-	z-index:2;
-	color:#fff;
-	transform:translateY(-50%);
-	
+  	}
+  	.intro-wrap{
+  		max-width:650px;
 
-}
-.intro h2{
-	color:#fff;
-	font-size:70px;
-	font-family: 'Bona Nova', sans-serif;
-}
-.intro p{
-	color:#eee;
-	font-size:19px;
-	max-height:30px;
-	
-}
-h2,h3{
+  	}
+
+  	h2,h3{
 	font-size:50px;
 	font-weight:700;
 	line-height:1.2;
 	color:#222;
 	margin-bottom:15px;
-	font-family: 'Bona Nova', sans-serif;
-}
-p{
-	font-size:18px;
-	color:#646464;
-	font-weight:400;
-	letter-spacing:1px;
+	font-family: 'Oswald', sans-serif;
+	}
 
-}
-a{
-	letter-spacing:1px;
-	text-decoration:none;
-	transition:.3s;
-}
-a:hover{
-	color:#b1a27e;
-}
+  	p{
+		font-size:18px;
+		color:#646464;
+		font-weight:400;
+		letter-spacing:1px;
+  	}
+  	.intro h2{
+  		color:#fff;
+  		font-size:70px;
+  		margin-bottom:30px;
+  		font-family:'Oswald',sans-serif;
+  		font-weight:700;
+  	}
+  	.intro p{
+  		color:#fff;
+  	}
+  	img{
+  		width:100%;
+  		height:auto;
+  		object-fit:cover;
+  		
+  	}
+  	.phone{
+  		position:absolute;
+  		top:100%;
 
-.logo img{
-	width:80px;
-	height:80px;
-}
-.navbar{
-	position:fixed;
-	top:0;
-	width:100%;
-	z-index:999;
-	background-color:transparent;
-}
-.nav-inner{
-	padding:15px 0;
-	display:flex;
-	justify-content:flex-end;
-	align-items:center;
-	width:100%;
-}
-.nav-inner .top-right{
-	position:relative;
-	text-align:right;
-}
-.top-right .apply-txt{
-	position:absolute;
-	color:#fff;
-	opacity:0;
-	right:0;
-	min-width:500px;
-}
+  	}
+  	.img-wrap{
+  		margin:0 auto;
+  	}
+  	.text h1{
+	  	font-size:120px;
+		font-weight:700;
+		font-family:'Bona Nova',sans-serif;
+  	}
 
-.nav-inner .hi-txt{
-	margin-bottom:0;
-	color:#fff;
-	font-weight:500;
-	letter-spacing:1.4px;
-}
-.nav-inner .top-right span.arrow{
-	margin-left:12px;
-	vertical-align:middle;
-	font-size:22px;
-	margin-bottom:5px;
-	transform:rotate(-45deg);
-	color:#fff;
-
-}
-
-
-
-.banner{
-	position:relative;
-	height:100vh;
-	padding:80px 0;
-}
-/*#tsparticles{
-	position:absolute;
-	z-index:0;
-	top:50%;
-	left:50%;
-	transform:translate(-50%,-50%);
-	border-radius:50%;
-	width:400px;
-	height:400px;
-
-}*/
-
-.particles{
-	position:relative;
-	width:100%;
-}
-
-.img-container{
-	display: flex;
-	justify-content:center;
-	align-items: center;
-	position:relative;
-	width:100%;
-}
-
-
-
-/*#globe{
-	position: absolute;
-    top: 50%;
-    right: 50px;
-    width: 70%;
-    height: 100vh;
-    padding-top:50px;
-    transform: translateY(-50%);
-    z-index: 1;
-}
-#globe canvas{
-	background:transparent;
-}*/
-section.sticky-2{
-  position:relative;
-  width:100%;
-  overflow:hidden;
-  max-height:100vh !important;
-  height:100vh !important;
-  
-}
-.img-container .half-img{
-	max-width:900px;
-	
-}
-
-.black{
-  position:absolute;
-  top:0;
-  left:0;
-  width:100%;
-  height:100%;
-  background:#000;
-}
-
-.big-text{
-  position:absolute;
-  top:0;
-  left:0;
-  width:100vw;
-  height:100vh;
-  display:flex;
-  justify-content:center;
-  align-items:center;
-}
-
-h1 { 
-   
-	display:inline-block; 
-	padding:10px 0; 
-	margin-bottom:0;
-	font-weight:700;
-	font-size:150px;
-	font-family: 'Bona Nova', sans-serif;
-}
-span#zoomText { 
-	display:flex;
-	width:100vw;
-	height:100vh;
-	transform:scale(10);
-	justify-content:center;
-	align-items:center;
-	letter-spacing:5px;
-	color: white;
-	background:transparent;
+  	.text {
+  	position:fixed;
+  	top:0;
+  	left:0;
+  	width:100%;
+  	height:100%;
+  	display:flex;
+  	flex-direction:column;
+  	justify-content:center;
+  	align-items:center;
+ 	color: white;
+	background:black;
 	mix-blend-mode:multiply;
-}
-/* loader */
-
-#loader{
-	position:fixed;
-	top:0;
-	left:0;
-	width:100%;
-	height:100%;
-	z-index:99999;
-	display:flex;
-	justify-content:center;
-	align-items:center;
-	background-color:#fff;
-}
-.lds-ellipsis {
-  display: inline-block;
-    position: absolute;
-    width: 80px;
-    height: 80px;
-    z-index: 999;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-.lds-ellipsis div {
-  position: absolute;
-  top: 33px;
-  width: 13px;
-  height: 13px;
-  border-radius: 50%;
-  background: #23153c;
-  animation-timing-function: cubic-bezier(0, 1, 1, 0);
-}
-.lds-ellipsis div:nth-child(1) {
-  left: 8px;
-  animation: lds-ellipsis1 0.6s infinite;
-}
-.lds-ellipsis div:nth-child(2) {
-  left: 8px;
-  animation: lds-ellipsis2 0.6s infinite;
-}
-.lds-ellipsis div:nth-child(3) {
-  left: 32px;
-  animation: lds-ellipsis2 0.6s infinite;
-}
-.lds-ellipsis div:nth-child(4) {
-  left: 56px;
-  animation: lds-ellipsis3 0.6s infinite;
-}
-@keyframes lds-ellipsis1 {
-  0% {
-    transform: scale(0);
-  }
-  100% {
-    transform: scale(1);
-  }
-}
-@keyframes lds-ellipsis3 {
-  0% {
-    transform: scale(1);
-  }
-  100% {
-    transform: scale(0);
-  }
-}
-@keyframes lds-ellipsis2 {
-  0% {
-    transform: translate(0, 0);
-  }
-  100% {
-    transform: translate(24px, 0);
-  }
-}
-
-.mid-text{
-	position:absolute;
-  top:35%;
-  left:50%;
-  transform:translate(-50%,-50%);
-  z-index:20;
-  color:#b1a27e;
-  font-weight:400;
-  font-size:1.1rem;
-  line-height:1.4;
-  text-align:center;
-  max-width:500px;
-  opacity:0;
-}
-.soon{
-	position:absolute;
-	top:50%;
-	left:50%;
-	transform:translate(-50%,-50%);
 	z-index:10;
-	color:#b1a27e;
-	margin-top:100px;
-	font-size:1.1rem;
-	font-weight:400;
-	opacity:0;
-}
-
-.main-wrapper{
-	position:relative;
-
-}
-
-/*.center-text{
-	text-align:center;
-	position:absolute;
-	top:50%;
-	left:50%;
-	max-width:400px;
-	transform:translate(-20%,-50%);
-}*/
-
-.network .social{
-	display:flex;
-	justify-content:space-between;
-	align-items:center;
-
-}
-.network a{
-	color:#b1a27e;
-	margin:0 10px;
-	font-size:1.2rem;
-	transition:.3s;
-
-}
-.network a:hover{
-	color:#fff;
-	transform:scale(1.1);
-
-}
-
-.network{
-	top:80%;
-}
-.p-relative{
-	position:relative;
-	height:100%;
-}
-.copyright{
-	position:absolute;
-	bottom:0;
-	left:0;
-	width:100%;
-	padding:15px 0;
-	color:#fff;
-}
-.copyright a{
-	color:#fff;
-}
-/*==========
-Media Queries
-===============*/
-@media(max-width:991px){
-
-}
-@media(max-width:765px){
-	.intro{
-		padding:0 15px;
-	}
-	.intro h2{
-		font-size:50px;
-		text-align:center;
-	}
-	.intro p{
-		text-align:center;
-	}
-	.big-text h1{
-		font-size:60px;
+	display:none;
 	}
 	.mid-text{
-		top:43%;
-		width:300px;
+		position:fixed;
+		top:0;
+		left:0;
+		overflow:hidden;
+		z-index:10;
+		height:100vh;
+		width:100vw;
+		display:flex;
+		flex-direction:column;
+		justify-content:center;
+		align-items:center;
+		opacity:0;
+		color:#b1a27e;
 	}
-	.network{
-		top:75%;
+	.mid-text .baseline-text{
+		max-width:500px;
+		text-align:center;
 	}
-	.soon{
-		margin-top:70px;
 
+	.mid-text .seperator{
+		height:25vh;
 	}
-	.img-container .half-img{
-		max-width:700px;
+	a{
+		text-decoration:none;
+		transition:.3s;
+	}
+	.copyright{
+		position: fixed;
+    bottom: 20px;
+    z-index: 999;
+    width: 100%;
+    color: #fff;
+    opacity:0;
 	}
 
+	.copyright a{
+		color:#fff;
+	}
+	#loader{
+		position:fixed;
+		top:0;
+		left:0;
+		width:100%;
+		height:100%;
+		display:flex;
+		z-index:9999;
+		justify-content:center;
+		align-items:center;
+		background-color:#f3f2f2;
+	}
 
+	.text-line {
+  stroke-dasharray: 500;
+  stroke-dashoffset: 500;
+  animation: dash 5s linear forwards, filling 3s ease-in forwards;
+  font-size: 60px;
+}
+
+.text-line text {
+  font-family: 'Poppins',sans-serif;
+  font-weight: 700;
+}
+
+@keyframes dash {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes filling {
+  0%, 90% { fill: #5036D5
+
+; fill-opacity: 0; }
+  100% { fill: #5B16D0
+; fill-opacity: 1; }
+}
+
+body::-webkit-scrollbar {
+  width: .9em;
+  background-color: #F5F5F5;
+
+}
+ 
+body::-webkit-scrollbar-track {
+  	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	background-color: #fff;
+	
+	
+
+}
+ 
+body::-webkit-scrollbar-thumb {
+ border-radius: 10px;
+	background-image: -webkit-gradient(linear,
+									   left bottom,
+									   left top,
+									   color-stop(0.44, rgb(122,153,217)),
+									   color-stop(0.72, rgb(73,125,189)),
+									   color-stop(0.86, rgb(28,58,148)));
+  
 }
 
 
+	/*Media Queries*/
+
+	@media(max-width:991px){
+
+	}
+	@media(max-width:768px){
+		.mid-text .baseline-text{
+			max-width:380px;
+
+		}
+		.img-wrap img{
+			width:auto;
+			max-width:850px;
+		}
+		.text h1{
+			font-size:70px;
+		}
+	}
+	
   </style>
 
 </head>
 
 <body>
-	<div id="loader">	
-		<div class="lds-ellipsis">
-		<div></div><div></div><div></div><div></div>
-		</div> 
+	<div id="loader">
+		<svg height="100" stroke=" #5B16D0 " stroke-width="1" class="text-line" width="100%"><text x="50%" dominant-baseline="middle" text-anchor="middle" y="50%">#SeriAmigo</text></svg>
 	</div>
-	<div class="body-wrap">
-	<nav class="navbar">
-		<div class="container">
-			<div class="nav-inner">
-				<a href="mailto:info@seriAmigo.com" class="top-right"><span class="hi-txt">info@seriAmigo.com<span class="material-symbols-outlined arrow">
-				arrow_right_alt
-				</span>
+	
+		<div id="net">		
+			
+		</div>
+		<div class="main-wrapper">
+			
+			<div class="inner-wrap">
+				<div class="intro">
+				  	<div class="container">
+				  		<div class="intro-wrap">	
+					  	  	<h2>Technology is best when it brings people together</h2>
+					  	  	<p>It has become appallingly obvious that our technology has exceeded our humanity. It is only when they go wrong that machines remind you how powerful they are</p>
+				  	  	</div>
+				  	</div>
+					<div class="phone">
+						<div class="img-wrap">
+							<img src="assets/img/Sateams.png">
+						</div>
+					</div>
+				</div>
+				
+			</div>
+			
 
-				</span><span class="apply-txt">Wana be Campus rep. ?<span class="material-symbols-outlined arrow">
-				arrow_right_alt
-				</span></span></a>
+		</div>
+		<div class="text">
+			
+			<h1 class="hero">SeriAmigo</h1>
+
+		</div>
+		<div class="mid-text">
+			<div class="baseline-text">In publishing and graphic design placeholder text commonly used to demonstrate the visual form</div>
+			<div class="seperator"></div>
+			<div class="bottom-line">Coming Soon</div>
+
+		</div>
+		<div class="copyright">
+			<div class="container">
+				<a href="#">&#169; seriAmigo | 2022</a>
 			</div>
 		</div>
+	
+	
 
-	</nav>
-	<div class="main-wrapper">
-		<div class="bg-effect">
-			
-	      	
-		  	<div class="intro">
-			  	<div class="container">	
-			  	  	<h2>Technology is best when it brings people together</h2>
-			  	  	<p>It has become appallingly obvious that our technology has exceeded our humanity. It is only when they go wrong that machines remind you how powerful they are</p>
-			  	</div>
-		  	</div>
-		  	<div class="wrapper">
-				<div class="img-container">
-			  		
-			  		<img src="assets/img/Sateams.png" class="half-img">
-			  	</div>
-			  	
-		  	</div>
-		  	
 		
-		  	
-		<div class="big-text">
-		 
-			<div class="wrapper">
-			   	<div class="mid-text">
-			     	In publishing and graphic design placeholder text commonly used to demonstrate the visual form
-			   	</div>
-			  <h1>    
-			    
-			     <span id="zoomText">SeriAmigo</span>
-			    
-			  </h1>
-			  	<p class="soon">Coming Soon</p>
-			    <div class="mid-text network">
-			      <div class="social">
-				     
-				      	<a href="#"><i class="fa-brands fa-twitter"></i></a>
-				      	<a href="#"><i class="fa-brands fa-instagram"></i></a>
-				      	<a href="#"><i class="fa-brands fa-youtube"></i></a>
-				      	<a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
-			      </div>   
-			  	</div>
-			  	
-			<div>
-				
-			  
-		</div> 
-		
-	</div>
-</div>
-<div class="copyright">
-	<div class="container">
-		<a href="#">&#169; seriAmigo | 2022</a>
-	</div>
-</div>
-</div>
-</div>
-</div>
-
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
   <script type="text/javascript" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/gsap-latest-beta.min.js?r=5426"></script>
   
@@ -521,7 +308,52 @@ Media Queries
 
   <!-- <script type="text/javascript" src="assets/js/samigo-particles.js"></script> -->
 
-   <script type="text/javascript" src="assets/js/samigo-1.2.js"></script>
+
+   <script type="text/javascript">
+
+	if($(window).load()){
+	$("#loader").fadeOut(7000);
+	$('body').fadeIn(7000);
+	}
+	else{
+	$("body").hide();
+	$('#loader').show();
+	}
+
+
+   	const effect = VANTA.NET({
+  el: "#net",
+  mouseControls: true,
+  touchControls: true,
+  gyroControls: false,
+  minHeight: 200.00,
+  minWidth: 200.00,
+  scale: 1.00,
+  scaleMobile: 1.08,
+  points: 8.00,
+  maxDistance: 24.00,
+  spacing: 17.00
+});
+
+   gsap.timeline({
+  scrollTrigger: {
+  trigger: ".main-wrapper",
+  start:'center center',
+  scrub: .5,
+  pin:true
+  }
+  })
+   .to(".intro h2",{y:-10, opacity:0})
+   .to('.intro p' , {y:-10 , opacity:0})
+   .to('.phone',5,{y:-300})
+   .fromTo('.text',5,{display:'none', scale:20},{display:'flex',scale:1})
+   .to('.text',{mixBlendMode:'normal'})
+   	.to('.mid-text',{opacity:1})
+   	.to('.copyright',{opacity:1});
+    
+ 
+
+   </script>
 
 </body>
 </html>
