@@ -73,5 +73,6 @@ x.addListener(myFunction) // Attach listener function on state changes
    .to('.mid-text',{ y:-40, position:"absolute", opacity:1, ease:"power4.out"})
    .to('.apply-txt',10,{ opacity:1}) 
    .to('.soon',10 ,{ opacity:1})    
-   .to('#zoomText',{duration:10, mixBlendMode:'normal', ease:"power3.out"});
+   .to('#zoomText',{duration:10, mixBlendMode:'normal', ease:"power3.out"})
+   .fromTo('.img-container',{display:'flex'},{ display:'none',ease:"power2.out"});
 
