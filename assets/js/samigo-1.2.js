@@ -58,7 +58,7 @@ x.addListener(myFunction) // Attach listener function on state changes
   gsap.timeline({
   scrollTrigger: {
   trigger: ".bg-effect",
-  start:'center center',
+  start:'top center',
   scrub: 2.5,
   pin: true
   }

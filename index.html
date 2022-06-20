@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Seriamigo - explore world !</title>
 
-  <link href="https://fonts.googleapis.com/css2?family=Bona+Nova:wght@400;700&family=Poppins&family=Oswald&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Bona+Nova:wght@400;700&family=Poppins&family=Kanit&display=swap" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
@@ -23,6 +23,48 @@
   		font-family: 'Poppins', sans-serif;
   		
   	}
+    .navbar{
+  position:fixed;
+  top:0;
+  width:100%;
+  z-index:999;
+  background-color:transparent;
+}
+.nav-inner{
+  padding:15px 0;
+  display:flex;
+  justify-content:flex-end;
+  align-items:center;
+  width:100%;
+}
+.nav-inner .top-right{
+  position:relative;
+  text-align:right;
+}
+.top-right .apply-txt{
+  position:absolute;
+  color:#fff;
+  opacity:0;
+  right:0;
+  min-width:500px;
+}
+
+.nav-inner .hi-txt{
+  margin-bottom:0;
+  color:#fff;
+  font-weight:500;
+  letter-spacing:1.4px;
+}
+.nav-inner .top-right span.arrow{
+  margin-left:12px;
+  vertical-align:middle;
+  font-size:22px;
+  margin-bottom:5px;
+  transform:rotate(-45deg);
+  color:#fff;
+
+}
+
   	.main-wrapper{
   		height:100%;
   	}
@@ -70,10 +112,10 @@
   	}
   	.intro h2{
   		color:#fff;
-  		font-size:70px;
+  		font-size:50px;
   		margin-bottom:30px;
   		font-family:'Oswald',sans-serif;
-  		font-weight:700;
+  		font-weight:800;
   	}
   	.intro p{
   		color:#fff;
@@ -97,6 +139,9 @@
 		font-weight:700;
 		font-family:'Bona Nova',sans-serif;
   	}
+    .img-wrap img{
+      max-width:700px;
+    }
 
   	.text {
   	position:fixed;
@@ -165,17 +210,52 @@
 		align-items:center;
 		background-color:#f3f2f2;
 	}
+  #loader .loader-text{
+    position: absolute;
+    height: 40px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .loader-text p{
+    position:relative;
+    z-index:10;
+   transform:translateY(100px) rotate(45deg);
+    font-size:30px;
+    font-family:'Bona Nova',sans-serif;
+    transition:all .6s ease-out;
 
-	.text-line {
-  stroke-dasharray: 500;
-  stroke-dashoffset: 500;
-  animation: dash 5s linear forwards, filling 3s ease-in forwards;
-  font-size: 60px;
+  }
+  .loader-text.showMe p{
+    transform:translateY(0) rotate(0);
+  }
+
+.social{
+  display:flex;
+  margin-top:30px;
+}
+.social a{
+  color: #b1a27e;
+    margin: 0 10px;
+    font-size: 1.2rem;
+    transition: .3s;
+    width: 40px;
+    height: 40px;
+    display: inline-block;
+    border: 1px solid #b1a27e73;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+
 }
 
-.text-line text {
-  font-family: 'Poppins',sans-serif;
-  font-weight: 700;
+
+.social a:hover{
+  color:#fff;
+  transform:scale(1.1);
+
 }
 
 @keyframes dash {
@@ -200,7 +280,7 @@ body::-webkit-scrollbar {
  
 body::-webkit-scrollbar-track {
   	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
-	background-color: #fff;
+	background-color: #484848;
 	
 	
 
@@ -208,14 +288,10 @@ body::-webkit-scrollbar-track {
  
 body::-webkit-scrollbar-thumb {
  border-radius: 10px;
-	background-image: -webkit-gradient(linear,
-									   left bottom,
-									   left top,
-									   color-stop(0.44, rgb(122,153,217)),
-									   color-stop(0.72, rgb(73,125,189)),
-									   color-stop(0.86, rgb(28,58,148)));
+	background-image: linear-gradient(to top, #0b052e, #0b135c, #19188c, #3517be, #5900f0);
   
 }
+
 
 
 	/*Media Queries*/
@@ -225,7 +301,7 @@ body::-webkit-scrollbar-thumb {
 	}
 	@media(max-width:768px){
 		.mid-text .baseline-text{
-			max-width:380px;
+			max-width:350px;
 
 		}
 		.img-wrap img{
@@ -249,9 +325,26 @@ body::-webkit-scrollbar-thumb {
 </head>
 
 <body>
-	<div id="loader">
-		<svg height="100" stroke=" #5B16D0 " stroke-width="1" class="text-line" width="100%"><text x="50%" dominant-baseline="middle" text-anchor="middle" y="50%">#SeriAmigo</text></svg>
-	</div>
+	<!-- <div id="loader">
+		<div class="loader-text">
+      <p>SeriAmigo</p>
+      <span></span>  
+    </div>
+	</div> -->
+
+    <nav class="navbar">
+      <div class="container">
+        <div class="nav-inner">
+          <a href="mailto:info@seriAmigo.com" class="top-right"><span class="hi-txt">info@seriAmigo.com<span class="material-symbols-outlined arrow">
+          arrow_right_alt
+          </span>
+
+          </span><span class="apply-txt">Wana be Campus rep. ?<span class="material-symbols-outlined arrow">
+          arrow_right_alt
+          </span></span></a>
+        </div>
+      </div>
+    </nav>
 	
 		<div id="net">		
 			
@@ -268,7 +361,7 @@ body::-webkit-scrollbar-thumb {
 				  	</div>
 					<div class="phone">
 						<div class="img-wrap">
-							<img src="assets/img/Sateams.png">
+							<img src="assets/img/Samobile.png">
 						</div>
 					</div>
 				</div>
@@ -286,6 +379,17 @@ body::-webkit-scrollbar-thumb {
 			<div class="baseline-text">In publishing and graphic design placeholder text commonly used to demonstrate the visual form</div>
 			<div class="seperator"></div>
 			<div class="bottom-line">Coming Soon</div>
+
+      <div class="social">
+
+        <a href="#"><i class="fa-brands fa-discord"></i></a>
+        <a href="#"><i class="fa-brands fa-instagram"></i></a>  
+        
+         <a href="#"><i class="fa-brands fa-youtube"></i></a>
+        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+        
+        <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+      </div>
 
 		</div>
 		<div class="copyright">
@@ -318,14 +422,9 @@ body::-webkit-scrollbar-thumb {
 
    <script type="text/javascript">
 
-	if($(window).load()){
-	$("#loader").fadeOut(7000);
-	$('body').fadeIn(7000);
-	}
-	else{
-	$("body").hide();
-	$('#loader').show();
-	}
+	$(window).load(function(){
+      $('.loader-text').addClass('showMe');
+  });
 
 
    	const effect = VANTA.NET({
@@ -350,11 +449,14 @@ body::-webkit-scrollbar-thumb {
   pin:true
   }
   })
+   .fromTo('.hi-txt',5,{opacity:1},{y:-10 , opacity:0, ease:'power2.out'})
    .to(".intro h2",{y:-10, opacity:0})
    .to('.intro p' , {y:-10 , opacity:0})
-   .to('.phone',5,{y:-300})
+   .to('.phone',5,{y:-200})
    .fromTo('.text',5,{display:'none', scale:20},{display:'flex',scale:1})
+   
    .to('.text',{mixBlendMode:'normal'})
+   .to('.apply-txt',{ opacity:1}) 
    	.to('.mid-text',{opacity:1})
    	.to('.copyright',{opacity:1});
     
