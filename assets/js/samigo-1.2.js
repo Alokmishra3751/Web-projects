@@ -32,7 +32,7 @@ const effect = VANTA.NET({
   minHeight: 200.00,
   minWidth: 200.00,
   scale: 1.00,
-  scaleMobile: 1.00,
+  scaleMobile: 1.08,
   points: 8.00,
   maxDistance: 24.00,
   spacing: 17.00
@@ -42,7 +42,8 @@ function myFunction(x) {
   if (x.matches) { // If media query matches
       effect.setOptions({
          points: 16.00,
-        maxDistance:19.00
+        maxDistance:19.00,
+        spacing: 19.00
 
       })
   } 
@@ -65,7 +66,8 @@ x.addListener(myFunction) // Attach listener function on state changes
   .fromTo('.hi-txt',5,{opacity:1},{y:-10 , opacity:0, ease:'power2.out'})
    .fromTo('.intro h2',5,{opacity:1},{y:-10 , opacity:0, ease:'power2.out'})
    .fromTo('.intro p',15,{opacity:1},{y:-10 , opacity:0, ease:'power2.out'})
-   .fromTo('.img-container',20,{y:600},{ y:100,ease:"power2.out"})
+   .fromTo('.img-container',20,{y:600},{ y:200,ease:"power2.out"})
+   .to('.big-text',{position:'fixed'})
    .to('#zoomText',{background:"#0D0C0C"})
    .fromTo('#zoomText',50,{display:'none'},{display:'flex',scale:1, ease:"power4.out"})
    .to('.mid-text',{ y:-40, position:"absolute", opacity:1, ease:"power4.out"})
