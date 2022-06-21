@@ -55,6 +55,7 @@
   font-weight:500;
   letter-spacing:1.4px;
 }
+
 .nav-inner .top-right span.arrow{
   margin-left:12px;
   vertical-align:middle;
@@ -82,7 +83,7 @@
   		position:relative;
   		z-index:2;
   		width:100%;
-  		height:100vh;
+  		height:120vh;
   		display:flex;
   		flex-direction:column;
   		justify-content:center;
@@ -437,7 +438,7 @@ body::-webkit-scrollbar-thumb {
   scale: 1.00,
   scaleMobile: 1.08,
   points: 8.00,
-  maxDistance: 24.00,
+  maxDistance: 28.00,
   spacing: 17.00
 });
 
@@ -478,7 +479,20 @@ addEventListener('resize', resize)
    	.to('.mid-text',{opacity:1})
    	.to('.copyright',{opacity:1});
     
- 
+  function myFunction(x) {
+  if (x.matches) { // If media query matches
+      effect.setOptions({
+         points: 16.00,
+        maxDistance:19.00,
+        spacing: 19.00
+
+      })
+  } 
+}
+
+var x = window.matchMedia("(max-width: 768px)")
+myFunction(x) // Call listener function at run time
+x.addListener(myFunction) // Attach listener function on state changes
 
    </script>
 
