@@ -315,6 +315,7 @@ body::-webkit-scrollbar-thumb {
 		.text h1{
 			font-size:70px;
 		}
+
     body::-webkit-scrollbar {
     display:none;
 
@@ -462,16 +463,15 @@ addEventListener('resize', resize)
    gsap.timeline({
   scrollTrigger: {  
   trigger: ".main-wrapper",
-  start:'center center',  
-  scrub: .5,
-  pin:true,
-  invalidateOnRefresh: true
+  start:'top top',  
+  scrub: 1,
+  pin:true
   }
   })
-   .fromTo('.hi-txt',5,{opacity:1},{y:-10 , opacity:0, ease:'power2.out'})
+   .fromTo('.hi-txt',{opacity:1},{y:-10 , opacity:0, ease:'power2.out'})
    .to(".intro h2",{y:-10, opacity:0})
    .to('.intro p' , {y:-10 , opacity:0})
-   .to('.phone',5,{y:-200})
+   .to('.phone',2,{y:-220})
    .fromTo('.text',5,{display:'none', scale:20},{display:'flex',scale:1})
    
    .to('.text',{mixBlendMode:'normal'})
