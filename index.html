@@ -441,12 +441,30 @@ body::-webkit-scrollbar-thumb {
   spacing: 17.00
 });
 
+    // removed resize we trigger it manually
+ScrollTrigger.config({
+  autoRefreshEvents: 'visibilitychange,DOMContentLoaded,load',
+})
+// window resize
+const resize = e => {
+  Xt.eventDelay({
+    e,
+    ns: 'xtScrolltriggerRerfreshFix',
+    func: () => {
+      ScrollTrigger.refresh()
+    },
+  })
+}
+removeEventListener('resize', resize)
+addEventListener('resize', resize)
+
    gsap.timeline({
-  scrollTrigger: {
+  scrollTrigger: {  
   trigger: ".main-wrapper",
-  start:'center center',
+  start:'center center',  
   scrub: .5,
-  pin:true
+  pin:true,
+  invalidateOnRefresh: true
   }
   })
    .fromTo('.hi-txt',5,{opacity:1},{y:-10 , opacity:0, ease:'power2.out'})
