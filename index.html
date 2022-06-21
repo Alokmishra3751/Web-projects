@@ -144,21 +144,23 @@
       max-width:700px;
     }
 
+
   	.text {
-  	position:fixed;
-  	top:0;
-  	left:0;
-  	width:100%;
-  	height:100%;
-  	display:flex;
-  	flex-direction:column;
-  	justify-content:center;
-  	align-items:center;
- 	color: white;
-	background:black;
-	mix-blend-mode:multiply;
-	z-index:10;
-	display:none;
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  color: white;
+  background:black;
+  mix-blend-mode:multiply;
+  z-index:10;
+  display:none;
+  transform-origin:47.5% 51%;
 	}
 	.mid-text{
 		position:fixed;
@@ -472,12 +474,12 @@ addEventListener('resize', resize)
    .to(".intro h2",{y:-10, opacity:0})
    .to('.intro p' , {y:-10 , opacity:0})
    .to('.phone',2,{y:-220})
-   .fromTo('.text',5,{display:'none', scale:20},{display:'flex',scale:1})
+   .fromTo('.text',4,{display:'none', scale:20},{display:'flex',scale:1})
    
    .to('.text',{mixBlendMode:'normal'})
-   .to('.apply-txt',{ opacity:1}) 
-   	.to('.mid-text',{opacity:1})
-   	.to('.copyright',{opacity:1});
+   .to('.apply-txt',{ opacity:1},"-=1") 
+   	.to('.mid-text',{opacity:1},"-=1")
+   	.to('.copyright',{opacity:1},"-=1");
     
   function myFunction(x) {
   if (x.matches) { // If media query matches
