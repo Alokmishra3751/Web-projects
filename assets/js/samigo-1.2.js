@@ -12,21 +12,23 @@
 //   size: 0.70,
 //   backgroundColor: 0x29044a
 // });
+ 
 
-if($(window).load()){
-   $("#loader").hide();
-   $('.body-wrap').show();
-}
-else{
-  $(".body-wrap").hide();
-   $('#loader').show();
-}
+   $(window).load(function(){
+    
+      $('.loader-text').addClass('showMe');
+       $('#loader').fadeOut(3700, function(){
+          
+         $('.body-wrap').addClass('show');
+         
+       });
+     
+   });
 
 
-
-const effect = VANTA.NET({
-  el: ".bg-effect",
- mouseControls: true,
+    const effect = VANTA.NET({
+  el: "#net",
+  mouseControls: true,
   touchControls: true,
   gyroControls: false,
   minHeight: 200.00,
@@ -34,11 +36,47 @@ const effect = VANTA.NET({
   scale: 1.00,
   scaleMobile: 1.08,
   points: 8.00,
-  maxDistance: 24.00,
+  maxDistance: 28.00,
   spacing: 17.00
 });
 
-function myFunction(x) {
+    // removed resize we trigger it manually
+ScrollTrigger.config({
+  autoRefreshEvents: 'visibilitychange,DOMContentLoaded,load',
+})
+// window resize
+const resize = e => {
+  Xt.eventDelay({
+    e,
+    ns: 'xtScrolltriggerRerfreshFix',
+    func: () => {
+      ScrollTrigger.refresh()
+    },
+  })
+}
+removeEventListener('resize', resize)
+addEventListener('resize', resize)
+
+   gsap.timeline({
+  scrollTrigger: {  
+  trigger: ".main-wrapper",
+  start:'top top',  
+  scrub: 1,
+  pin:true
+  }
+  })
+   .fromTo('.hi-txt',{opacity:1},{y:-5 , opacity:0, ease:'power2.out'})
+   .to(".intro h2",{y:-10, opacity:0})
+   .to('.intro p' , {y:-10 , opacity:0})
+   .to('.phone',2,{y:-220})
+   .fromTo('.text',4,{display:'none', scale:20},{display:'flex',scale:1})
+   
+   .to('.text',{mixBlendMode:'normal'})
+   .to('.apply-txt',{ opacity:1},"-=1") 
+    .to('.mid-text',{opacity:1},"-=1")
+    .to('.copyright',{opacity:1},"-=1");
+    
+  function myFunction(x) {
   if (x.matches) { // If media query matches
       effect.setOptions({
          points: 16.00,
@@ -52,27 +90,3 @@ function myFunction(x) {
 var x = window.matchMedia("(max-width: 768px)")
 myFunction(x) // Call listener function at run time
 x.addListener(myFunction) // Attach listener function on state changes
-  
-  // Gsap Scroll Section-1
-
-  gsap.timeline({
-  scrollTrigger: {
-  trigger: ".bg-effect",
-  start:'top center',
-  scrub: 2.5,
-  pin: true
-  }
-  })
-  .fromTo('.hi-txt',5,{opacity:1},{y:-10 , opacity:0, ease:'power2.out'})
-   .fromTo('.intro h2',5,{opacity:1},{y:-10 , opacity:0, ease:'power2.out'})
-   .fromTo('.intro p',15,{opacity:1},{y:-10 , opacity:0, ease:'power2.out'})
-   .fromTo('.img-container',20,{y:600},{ y:100,ease:"power2.out"})
-   .to('#zoomText',{background:"#0D0C0C"})
-   .fromTo('#zoomText',50,{display:'none'},{display:'flex',scale:1, ease:"power4.out"})
-   .to('.mid-text',{ y:-40, opacity:1, ease:"power4.out"})
-   .to('.apply-txt',10,{ opacity:1}) 
-   .to('.soon',10 ,{ opacity:1})    
-   .to('#zoomText',{duration:10, mixBlendMode:'normal', ease:"power3.out"})
-   .fromTo('.img-container',{y:200},{ y:0,ease:"power2.out"})
-   .fromTo('.copyright',5,{opacity:0},{ opacity:1,ease:"power2.out"});
-
