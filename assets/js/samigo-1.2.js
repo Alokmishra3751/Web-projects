@@ -12,6 +12,15 @@
 //   size: 0.70,
 //   backgroundColor: 0x29044a
 // });
+
+  var net = $("#net");
+
+function resizeBackground() {
+    net.height($(window).height() + 60);
+}
+
+$(window).resize(resizeBackground);
+resizeBackground();
   
   function makeIntro(){
   gsap.fromTo('.animate-wrap',1.5,{autoAlpha: 0 ,},{autoAlpha: 1, delay: .5 });
