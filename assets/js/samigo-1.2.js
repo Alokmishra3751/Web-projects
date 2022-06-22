@@ -14,8 +14,8 @@
 // });
   
   function makeIntro(){
-  gsap.fromTo('.animate-wrap',.8,{autoAlpha: 0 ,},{autoAlpha: 1, delay: 1 });
-  gsap.fromTo('.animate-wrap-2',.9,{autoAlpha: 0 ,},{autoAlpha: 1, delay: 1.5 });
+  gsap.fromTo('.animate-wrap',.8,{autoAlpha: 0 ,},{autoAlpha: 1, delay: .5 });
+  gsap.fromTo('.animate-wrap-2',.9,{autoAlpha: 0 ,},{autoAlpha: 1, delay: .7 });
   }
   
    $(document).ready(function(){
@@ -23,7 +23,7 @@
     setTimeout(function(){
       $('#loader').fadeOut(200);
        makeIntro();    
-    },3000); 
+    },2000); 
 
     
      
