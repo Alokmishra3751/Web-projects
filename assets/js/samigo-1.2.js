@@ -16,10 +16,9 @@
   
    $(document).ready(function(){
     $('.loader-text').addClass('showMe');
-      setTimeout(function(){
-        $('#loader').fadeOut(200);
-      },3000);
-      
+    setTimeout(function(){
+      $('#loader').fadeOut(200);
+    },3000);      
      
    });
 
@@ -66,9 +65,9 @@ addEventListener('resize', resize)
    .fromTo('.hi-txt',{opacity:1},{y:-5 , opacity:0, ease:'power2.out'})
    .to(".intro h2",{y:-10, opacity:0})
    .to('.intro p' , {y:-10 , opacity:0})
-   .to('.phone',2,{y:-220})
-   .fromTo('.text',4,{display:'none', scale:20},{display:'flex',scale:1})
-   
+   .to('.phone',1,{y:-220})
+   .fromTo('.text',3,{display:'none', scale:20},{display:'flex',scale:1})
+   .to('.text',.1,{ background:'rgba(0,0,0,1)'},'-=2')
    .to('.text',{mixBlendMode:'normal'})
     .to('.mid-text',{opacity:1},"-=1")
     .to('.copyright',{opacity:0.3},"-=1");
