@@ -279,7 +279,7 @@
     fill:none;
     stroke:#FFFFFF;
     stroke-width:4px;
-    animation: dash 1s .8s  linear forwards;
+    animation: dash 1s 1s  linear forwards;
     stroke-dasharray:0 800;
     
 
