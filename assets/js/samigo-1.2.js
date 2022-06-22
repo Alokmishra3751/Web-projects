@@ -76,11 +76,12 @@ addEventListener('resize', resize)
    .to(".intro h2",{y:-10, opacity:0})
    .to('.intro p' , {y:-10 , opacity:0})
    .to('.phone',1,{y:-220})
-   .fromTo('.text',3,{display:'none', scale:20},{display:'flex',scale:1})
+   .fromTo('.text',2,{display:'none', scale:20},{display:'flex',scale:1})
    .to('.text',.2,{ background:'rgba(0,0,0,1)'},'-=1')
    .to('.text',{mixBlendMode:'normal'})
     .to('.mid-text',{opacity:1},"-=1")
     .to('.copyright',{opacity:0.3},"-=1");
+
     
   function myFunction(x) {
   if (x.matches) { // If media query matches
