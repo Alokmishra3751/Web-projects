@@ -368,5 +368,10 @@ body::-webkit-scrollbar-thumb {
     .copyright{
       text-align:center;
     }
+    #net{
+      min-height:100%;
+      max-height:100%;
+      
+    }
 	}
 	
