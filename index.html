@@ -23,17 +23,8 @@
   		font-family: 'Poppins', sans-serif;
       
   		
-  	}
-   
-    .body-wrap{
-      opacity:0;
-      visibility:hidden;
-      transition:.4s ease-out;
-    }
-    .body-wrap.show{
-      opacity:1;
-      visibility:visible;
-    }
+  	}   
+
    
     .navbar{
   position:fixed;
@@ -53,12 +44,17 @@
   position:relative;
   text-align:right;
 }
-.top-right .apply-txt{
-  position:absolute;
+ .apply-txt{
+  margin-top:20px;
+  display:block;
+  color:#b1a27e;
+  transition:.3s;
+}
+.apply-txt:hover{
   color:#fff;
-  opacity:0;
-  right:0;
-  min-width:500px;
+}
+.apply-txt span.arrow{
+  color:#b1a27e;
 }
 
 .nav-inner .hi-txt{
@@ -68,15 +64,15 @@
   letter-spacing:1.4px;
 }
 
-.nav-inner .top-right span.arrow{
-  margin-left:12px;
-  vertical-align:middle;
-  font-size:22px;
-  margin-bottom:5px;
-  transform:rotate(-45deg);
-  color:#fff;
+   span.arrow{
+    margin-left:12px;
+    vertical-align:middle;
+    font-size:22px;
+    margin-bottom:5px;
+    transform:rotate(-45deg);
+    color:#fff;
 
-}
+  }
 
   	.main-wrapper{
   		height:100%;
@@ -90,6 +86,16 @@
   		height:100%;
   		overflow:hidden;
   	}
+    #net:before{
+      content:"";
+      position:absolute;
+      top:0;
+      left:0;
+      height:100%;
+      width:100%;
+      z-index:1;
+      background-color:rgb(0 0 0 / 23%);
+    }
   	
   	.intro{
   		position:relative;
@@ -180,6 +186,7 @@
 		left:0;
 		overflow:hidden;
 		z-index:10;
+    margin-top:20px;
 		height:100vh;
 		width:100vw;
 		display:flex;
@@ -257,7 +264,9 @@
     margin-top:-60px;
     margin-left:50px;
     opacity:0;
-    transition:all 1s ease-in;
+    position:relative;
+    overflow:hidden;
+    transition:all .8s ease-in;
 
     
   }
@@ -269,14 +278,15 @@
     fill:none;
     stroke:#1E1935;
     stroke-width:4px;
-    animation: dash 1s 2.5s  linear forwards;
-    stroke-dasharray:0 700; 
+    animation: dash 1s 2.2s  linear forwards;
+    stroke-dasharray:0 800;
+    
 
   }
 
   @keyframes dash {
   100% {
-    stroke-dasharray:700 0;
+    stroke-dasharray:800 0;
   }
 }
 
@@ -300,7 +310,6 @@
 
 }
 
-
 .social a:hover{
   color:#fff;
   transform:scale(1.1);
@@ -310,14 +319,14 @@
 
 
 body::-webkit-scrollbar {
-  width: .9em;
-  background-color: #F5F5F5;
+  width: .8em;
+  background-color: #383838;
 
 }
  
 body::-webkit-scrollbar-track {
   	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
-	background-color: #484848;
+	background-color: #383838;
 	
 	
 
@@ -325,7 +334,7 @@ body::-webkit-scrollbar-track {
  
 body::-webkit-scrollbar-thumb {
  border-radius: 10px;
-	background-image: linear-gradient(to top, #0b052e, #0b135c, #19188c, #3517be, #5900f0);
+	background-color:#fff;
   
 }
 
@@ -384,9 +393,7 @@ body::-webkit-scrollbar-thumb {
           arrow_right_alt
           </span>
 
-          </span><span class="apply-txt">Wana be Campus rep. ?<span class="material-symbols-outlined arrow">
-          arrow_right_alt
-          </span></span></a>
+          </span></a>
         </div>
       </div>
     </nav>
@@ -400,8 +407,8 @@ body::-webkit-scrollbar-thumb {
 				<div class="intro">
 				  	<div class="container">
 				  		<div class="intro-wrap">	
-					  	  	<h2>Programming is best when it brings people together</h2>
-					  	  	<p>It has become appallingly obvious that our technology has exceeded our humanity. It is only when they go wrong that machines remind you how powerful they are</p>
+					  	  	<h2>Interconnecting college students with a new digital interaction platform</h2>
+					  	  	<p>Multidimensional • Community • Cheerful</p>
 				  	  	</div>
 				  	</div>
 					<div class="phone">
@@ -421,25 +428,31 @@ body::-webkit-scrollbar-thumb {
 
 		</div>
 		<div class="mid-text">
-			<div class="baseline-text">In publishing and graphic design placeholder text commonly used to demonstrate the visual form</div>
+			<div class="baseline-text">A digital transformation firm, introducing solutions to the challenges of the college students.</div>
 			<div class="seperator"></div>
-			<div class="bottom-line">Coming Soon</div>
+			<div class="bottom-line">
+        <a href="#">
+        <span class="apply-txt">Become a Summer 2022 Campus Rep ? <span class="material-symbols-outlined arrow">
+          arrow_right_alt
+          </span></span>
+        </a>  
+      </div>
 
       <div class="social">
 
-        <a href="#"><i class="fa-brands fa-discord"></i></a>
-        <a href="#"><i class="fa-brands fa-instagram"></i></a>  
+        <a href="https://discord.gg/pw8C2Nrs"><i class="fa-brands fa-discord"></i></a>
+        <a href="https://www.instagram.com/seriamigo/"><i class="fa-brands fa-instagram"></i></a>  
         
-         <a href="#"><i class="fa-brands fa-youtube"></i></a>
-        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+         <a href="https://www.youtube.com/channel/UC8DAvp3ZyhpipkGcnzBiO_g"><i class="fa-brands fa-youtube"></i></a>
+        <a href="https://twitter.com/seriamigo"><i class="fa-brands fa-twitter"></i></a>
         
-        <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+        <a href="https://www.linkedin.com/company/seriamigo"><i class="fa-brands fa-linkedin-in"></i></a>
       </div>
 
 		</div>
 		<div class="copyright">
 			<div class="container">
-				<a href="#">&#169; seriAmigo | 2022</a>
+				<a href="#">&#169; SERIAMIGO PRIVATE LIMITED | 2022 | INDIA</a>
 			</div>
 		</div>
   </div>  
@@ -456,7 +469,7 @@ body::-webkit-scrollbar-thumb {
   <script type="text/javascript" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/230399/threeGeoJSON.js"></script>
    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script> 
    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/tsparticles@1.18.3/dist/tsparticles.min.js"></script> 
-   <script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
+   <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <!-- <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r70/examples/js/controls/OrbitControls.min.js"></script>  -->
     <script type="text/javascript" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/230399/TrackballControls.js"></script> 
 	<script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>

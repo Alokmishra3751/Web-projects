@@ -13,15 +13,13 @@
 //   backgroundColor: 0x29044a
 // });
  
-
-   $(window).load(function(){
-    
-      $('.loader-text').addClass('showMe');
-       $('#loader').fadeOut(3700, function(){
-          
-         $('.body-wrap').addClass('show');
-         
-       });
+  
+   $(document).ready(function(){
+    $('.loader-text').addClass('showMe');
+      setTimeout(function(){
+        $('#loader').fadeOut(200);
+      },3000);
+      
      
    });
 
@@ -35,8 +33,8 @@
   minWidth: 200.00,
   scale: 1.00,
   scaleMobile: 1.08,
-  points: 8.00,
-  maxDistance: 28.00,
+  points: 10.00,
+  maxDistance: 22.00,
   spacing: 17.00
 });
 
@@ -72,9 +70,8 @@ addEventListener('resize', resize)
    .fromTo('.text',4,{display:'none', scale:20},{display:'flex',scale:1})
    
    .to('.text',{mixBlendMode:'normal'})
-   .to('.apply-txt',{ opacity:1},"-=1") 
     .to('.mid-text',{opacity:1},"-=1")
-    .to('.copyright',{opacity:1},"-=1");
+    .to('.copyright',{opacity:0.3},"-=1");
     
   function myFunction(x) {
   if (x.matches) { // If media query matches
