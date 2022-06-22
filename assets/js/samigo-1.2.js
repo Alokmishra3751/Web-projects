@@ -14,7 +14,6 @@
 // });
   
   function makeIntro(){
-  gsap.fromTo('#net',.5,{autoAlpha: 0},{autoAlpha: 1});
   gsap.fromTo('.animate-wrap',.8,{autoAlpha: 0 ,},{autoAlpha: 1, delay: 1 });
   gsap.fromTo('.animate-wrap-2',.9,{autoAlpha: 0 ,},{autoAlpha: 1, delay: 1.5 });
   }
@@ -76,8 +75,9 @@ addEventListener('resize', resize)
    .to(".intro h2",{y:-10, opacity:0})
    .to('.intro p' , {y:-10 , opacity:0})
    .to('.phone',1,{y:-220})
+   .to('.text',.2,{ background:'rgba(0,0,0,1)'})
    .fromTo('.text',2,{display:'none', scale:20},{display:'flex',scale:1})
-   .to('.text',.2,{ background:'rgba(0,0,0,1)'},'-=1')
+   
    .to('.text',{mixBlendMode:'normal'})
     .to('.mid-text',{opacity:1},"-=1")
     .to('.copyright',{opacity:0.3},"-=1");
