@@ -1,0 +1,284 @@
+
+body{
+  margin:0;
+  padding:0;
+  overflow-x:hidden;
+  transition:all .3s ease-in;
+  font-family:Kanit,sans-serif;
+  background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAIAAACRXR/mAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAIGNIUk0AAHolAACAgwAA+f8AAIDpAAB1MAAA6mAAADqYAAAXb5JfxUYAAABnSURBVHja7M5RDYAwDEXRDgmvEocnlrQS2SwUFST9uEfBGWs9c97nbGtDcquqiKhOImLs/UpuzVzWEi1atGjRokWLFi1atGjRokWLFi1atGjRokWLFi1af7Ukz8xWp8z8AAAA//8DAJ4LoEAAlL1nAAAAAElFTkSuQmCC") repeat 0 0 , rgb(39, 41, 45);
+  background-blend-mode:multiply;
+  
+
+}
+
+
+h1,h2,h3,h4,h5,h6{
+  font-weight:500;
+
+}
+p{
+  font-weight:300;
+  font-size:16px;
+  color:#b4b4b4;
+}
+section{
+  position:relative;
+  overflow:hidden;
+}
+   
+.nav-wrap{
+  background-color:transparent;
+  padding:0 30px;
+  top:0;
+  left:0;
+  position:fixed;
+  width:100%;
+  z-index:10000;
+
+}
+.nav-wrap a{
+  color:#fff;
+  font-size:19px;
+  font-weight:200;
+  margin:0 15px;
+}
+.navbar-brand a{
+  font-weight:500;
+  font-size:20px;
+}
+.nav-wrap .navbar-nav{
+  align-items:center;
+}
+
+.ui-circle.line {
+    width: 60px;
+    height: 1px;
+    background-color:#fff;
+}
+
+.nav-wrap .navbar-collapse{
+  justify-content:flex-end;
+}
+#main-section .wrapper{
+ 
+  height:100vh;
+  position:relative;
+
+}
+#main-section .container{
+  height:100vh;
+}
+
+#main-section .pr-img{
+  position:absolute;
+  top:50%;
+  left:50%;
+  transition:.3s;
+  max-width:420px;
+}
+
+
+.intro{
+  position: absolute;
+    top: 50%;
+    left: 0;
+    width:100%;
+    transform: translateY(-50%);
+}
+
+.intro-wrap{
+    padding-left:70px;
+}
+.v-text{
+  width:100%;
+  display:flex;
+  justify-content:center;
+  align-items: center;
+  height:30vh;
+}
+.v-text p{
+  transform:rotate(90deg);
+  position:relative;
+}
+.v-text p:after{
+  content:"";
+  display:block;
+  position:absolute;
+  top:53%;
+
+  margin-left:10px;
+  left:100%;
+  width:50px;
+  height:1px;
+  background:#b4b4b4;
+}
+
+.intro h3{
+  font-size:5vw;
+  font-weight: 500;
+  color:#fff;
+}
+
+.pr-img.p1{
+  transform:translate(-10%, 20%);
+}
+.pr-img.p2{
+  transform:translate(90%, -20%);
+}
+.pr-img.p3{
+  transform:translate(90%, -90%);
+}
+.pr-img.p4{
+  transform:translate(18%, -60%);
+}
+.pr-img.p5{
+  transform:translate(40%, -2%);
+}
+
+.pr-img:hover{
+  filter:none;
+  
+}
+.phone-wrap{
+  text-align:center;
+  position:absolute;
+  overflow:hidden;
+  top:50%;
+  left:50%;
+  transform:translate(-50%,-50%);
+}
+.phone img{
+    width:100%;
+    height:auto;
+    object-fit:cover;
+}
+
+.phone{
+  transform:translateY(100%) scale(0.8);
+  max-width:380px;
+ 
+  position:relative;
+  overflow:hidden;
+}
+.svg-pattern{
+  position:absolute;
+  height:100%;
+  width:100%;
+  top:0;
+  left:0;
+  z-index:0;
+ 
+}
+.magic-bg{
+  position:absolute;
+  top:50%;
+  left:50%;
+  background-color:#fff;
+  transform:translate(-49.9%,-50%);
+  z-index:1;
+  width:278px;
+  height:215px;
+}
+.hulk-text{
+  position:absolute;
+  width:100%;
+  top:50%;
+  left:0;
+  transform:translateY(-50%);
+
+}
+
+h2.hulk-left{
+  font-size:15vw;
+  color:#fff;
+  text-align:center;
+  transform:translateX(-100%);
+}
+
+h2.hulk-right{
+  font-size:15vw;
+  color:#fff;
+  text-align:center;
+  transform:translateX(100%);
+}
+
+/*-- New UI --*/
+.section-padding{
+  padding:60px 0;
+}
+.phone-ii{
+  width: 100%;
+  height:100vh;
+  position: relative;
+}
+
+.sa-timeline.section-padding{
+  padding-top:120px;
+
+}
+
+
+.phone-ii .content {
+ background-image: url(../img/iphone.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 100%;
+    height: 100%;
+    max-width: 436px;
+    position: relative;
+}
+
+.phone-ii .inner {
+  position: absolute;
+    top: 50%;
+    left: 50%;
+    height: 622px;
+    transform: translate(-50%, -50%);
+}
+.phone-ii img{
+ width: 284px;
+    height: 600px;
+}
+
+@media(max-width: 991px){
+  .phone-wrap{
+    height:100vh;
+    width:65%;
+    display:flex;
+    justify-content:center;
+    align-items: center;
+  }
+  .phone{
+    max-width:100%;
+    transform:translateY(150%);
+  }
+  .intro{
+    width:100%;
+    padding:0 30px;
+    top:25%;
+  }
+  .intro h3{
+    font-size:50px;
+  }
+  #main-section .pr-img{
+    max-width:300px;
+  }
+  .pr-img.p1{
+  transform:translate(-70%, 32%);
+  }
+  .pr-img.p2{
+  transform:translate(8%, 65%);
+  }
+  .pr-img.p3{
+  transform:translate(10%, -30%);
+  }
+  .pr-img.p4{
+  transform:translate(-20%, 10%);
+  }
+  .pr-img.p5{
+  transform:translate(-70%, 100%);
+  }
+}
+
+
+</style>
