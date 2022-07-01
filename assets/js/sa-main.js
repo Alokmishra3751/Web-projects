@@ -1,5 +1,4 @@
 
-
   ScrollTrigger.matchMedia({
     //desktop
     "(min-width:991px)": function(){
@@ -144,7 +143,4 @@
 
 
 
-  
-  
-  
 
