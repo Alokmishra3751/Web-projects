@@ -7,14 +7,10 @@ $(function(){
   animatedClassName: 'animate__animated',
     });
   
-  $('.section-title'). attr('data-aos', 'animate__fadeIn'); 
-
-    
-
-    
+  $('.section-title'). attr('data-aos', 'animate__fadeIn');
 
 
-
+  
 
   AOS.refreshHard();
 
