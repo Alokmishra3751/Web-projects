@@ -8,6 +8,7 @@ let name = document.getElementById("user_name")
 let message = document.getElementById("user_message")
 
 if(email.value !='' && name.value !='' && message.value != ''){
+  $('#form-warn').hide();
   $('#submitBtn').addClass('hide');
   $('.tick-box').addClass('wheel');
 
