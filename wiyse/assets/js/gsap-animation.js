@@ -27,8 +27,7 @@
         scrollTrigger: {
         trigger: ".intro",    
         start: "top top",
-        end:"bottom top",
-        markers:true,
+        end:"1500s",
         pin: true,
         scrub:1,
         }
