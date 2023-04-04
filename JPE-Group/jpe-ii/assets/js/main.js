@@ -43,6 +43,21 @@ document.addEventListener('DOMContentLoaded', () => {
     }));
   }
 
+  // hero-slider
+
+  $('.hero-slider').slick({
+    dots: true,
+    infinite: true,
+    autoplay:true,
+    arrows:false,
+    prevArrow: '<button type="button" class="slick-prev"><i class="fas fa-arrow-left"></i></button>',
+  nextArrow: '<button type="button" class="slick-next"><i class="fas fa-arrow-right"></i></button>',
+    autoplaySpeed:2200,
+    speed: 2000,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+  });
+
   /**
    * Mobile nav toggle
    */
@@ -99,6 +114,33 @@ document.addEventListener('DOMContentLoaded', () => {
     })
   });
 
+   jQuery('.product-slider-left').slick({
+        
+    arrows: false,
+    autoplay: true,
+    autoplaySpeed: 0,
+    infinite:true,
+    speed: 7000,
+    slidesToShow:3,
+    slideToScroll:1,
+    cssEase: "linear",
+    pauseOnHover: true
+  });
+
+   jQuery('.product-slider-right').slick({
+    rtl:true,
+    arrows: false,
+    autoplay: true,
+    autoplaySpeed: 0,
+    infinite:true,
+    slidesToShow:3,
+    slideToScroll:1,
+    speed: 7000,
+    cssEase: "linear",
+    pauseOnHover: true
+  });
+    
+
   /**
    * Initiate pURE cOUNTER
    */
@@ -121,7 +163,8 @@ document.addEventListener('DOMContentLoaded', () => {
       delay: 5000,
       disableOnInteraction: false
     },
-    slidesPerView: 'auto',
+
+    slidesPerView: '2',
     pagination: {
       el: '.swiper-pagination',
       type: 'bullets',
