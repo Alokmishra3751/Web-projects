@@ -693,6 +693,211 @@ section {
     z-index: 9996;
   }
 }
+/*Line-card-1*/
+.line-card-section .col-lg-3{
+  margin-bottom:20px;
+}
+
+.line-card-banner .page-header{
+  padding:70px 0;
+}
+.line-card-banner .page-header h2{
+  font-weight:700;
+  margin:20px 0;
+}
+.line-card-banner .page-header p{
+  max-width:800px;
+  margin:0 auto;
+}
+
+.card-img{
+  max-width:180px;
+  padding:10px 0;
+}
+.card-content{
+  padding: 15px;
+  background:#fff;
+  margin:10px 0;
+  box-shadow:0 3px 8px 0 rgba(0,0,0,0.1);
+  border-radius:10px;
+}
+.card-content span{
+  font-weight:700;
+  font-size:25px;
+  display:block;
+  line-height:30px;
+  margin-bottom:10px;
+}
+.basic-card p{
+  font-size:14px;
+  display: -webkit-box; /* Set the display property to a webkit box */
+  -webkit-line-clamp: 4; /* Set the maximum number of lines to display to 4 */
+  -webkit-box-orient: vertical; /* Set the orientation of the box to vertical */
+  overflow: hidden; /* Hide any overflow text */
+  text-overflow: ellipsis; /* Show an ellipsis for any overflow text */
+
+
+}
+
+.basic-card{
+ padding: 10px;
+ width:100%;
+   border:1px solid #05144a30;
+    background: #f3f6fc;
+    border-radius: 10px;
+    height: 100%;
+    display: flex;
+    transition:all .3s ease-in;
+    justify-content:space-between;
+    flex-direction: column;
+
+}
+.basic-card:hover,
+.basic-card:focus{
+  border-color:var(--color-primary);
+}
+
+.card-link a{
+  padding:10px;
+  width:100%;
+  position:relative;
+  display:block;
+  border-radius:5px;
+  background:var(--color-secondary);
+  color:#fff !important;
+  transition:all .3s ease-in;
+  font-weight:500;
+}
+.card-link a:hover,
+.card-link a:focus{
+  background:var(--color-primary);
+}
+
+
+.card-link a:after {
+  content: "\f061";
+  font-family: "Font Awesome 5 Free";
+  font-style: normal;
+  font-variant-caps: normal;
+  font-variant-ligatures: normal;
+  font-weight: 900;
+  float:right;
+  vertical-align:middle;
+
+  text-rendering: auto;
+  width: 16px;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Line-card-2 *
+
+
+
+.line-card-banner .page-header{
+  padding:70px 0;
+}
+.line-card-banner .page-header h2{
+  font-weight:700;
+  margin:20px 0;
+}
+.line-card-banner .page-header p{
+  max-width:800px;
+  margin:0 auto;
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  padding: 5px;
+  text-align: center;
+  background-color: #fff;
+  border-radius:10px;
+  cursor:pointer;
+}
+.card .profile{
+   border-radius:10px;
+   transition: 0.2s;
+}
+.card:hover .profile{
+  transform:scale(1.4);
+  border-top-right-radius:50px;
+  border-top-left-radius:50px;
+}
+
+.card .content{
+  width:100%;
+  height:100%;
+  position:relative;
+  overflow:hidden;
+}
+.card .content .back{
+  position:absolute;
+  width:100%;
+  height:100%;
+  background-color: #f1f1f1e6;
+  transition:1s;
+  
+  z-index:1;
+  padding:10px;
+}
+
+.from-left{
+  top:0;
+  left:-100%;
+}
+.card:hover .content .from-left {
+   left:0%;
+}
+
+.from-bottom{
+  top:100%;
+  left:0;
+}
+.card:hover .content .from-bottom {
+   top:0%;
+}
+
+.from-right{
+  top:0%;
+  right:-100%;
+}
+.card:hover .content .from-right {
+   right:0;
+}
+
+.card .content .back h3{
+  font-size:15px;
+  letter-spacing:2px;
+}
+.card .content .back .tem-img{
+  border-radius:100%;
+}
+
+.card .content .back .des{
+  font-size:13px;
+  padding:20px 0px;
+}
+.card .content .back .social-icon{
+  list-style:none;
+  margin:0px;
+  padding:0px;
+}
+.card .content .back .social-icon li{
+  display:inline-block;
+}
+
+.card .content .back .social-icon li a{
+  display:block;
+  background:#333;
+  color:#fff;
+  width:40px;
+  height:40px;
+  text-align:center;
+  line-height:40px;
+  border-radius:100%;
+}
+
+
+
 
 /*--------------------------------------------------------------
 # Featured Services Section
