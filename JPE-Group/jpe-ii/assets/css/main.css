@@ -693,6 +693,11 @@ section {
     z-index: 9996;
   }
 }
+/*line-card-style-2*/
+
+
+
+
 /* line-card-info  */
 
 .line-icons a{
@@ -812,103 +817,108 @@ section {
   -webkit-font-smoothing: antialiased;
 }
 
-/* Line-card-2 *
+/* linecardstyle2  */
 
 
-
-.line-card-banner .page-header{
-  padding:70px 0;
+#lineCardStyle2 .card {
+ box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    padding: 5px;
+    height: 100px;
+    position: relative;
+    text-align: center;
+    background-color: #fff;
+    border-radius: 10px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-.line-card-banner .page-header h2{
-  font-weight:700;
-  margin:20px 0;
+#lineCardStyle2 .card .profile{
+   border-radius: 10px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+    transition: 0.2s;
 }
-.line-card-banner .page-header p{
-  max-width:800px;
-  margin:0 auto;
-}
-
-.card {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  padding: 5px;
-  text-align: center;
-  background-color: #fff;
-  border-radius:10px;
-  cursor:pointer;
-}
-.card .profile{
-   border-radius:10px;
-   transition: 0.2s;
-}
-.card:hover .profile{
+#lineCardStyle2 .card:hover .profile{
   transform:scale(1.4);
   border-top-right-radius:50px;
   border-top-left-radius:50px;
 }
 
-.card .content{
+#lineCardStyle2 .card .content{
   width:100%;
   height:100%;
   position:relative;
+  display:flex;
+  justify-content:center;
+  align-items:center;
   overflow:hidden;
 }
-.card .content .back{
+#lineCardStyle2 .card-link{
+  width:100%;
+}
+
+#lineCardStyle2 .card .content .back{
   position:absolute;
   width:100%;
   height:100%;
   background-color: #f1f1f1e6;
   transition:1s;
-  
+  display:flex;
+  justify-content:center;
+  align-items:center;
   z-index:1;
   padding:10px;
 }
 
-.from-left{
+#lineCardStyle2 .from-left{
   top:0;
   left:-100%;
 }
-.card:hover .content .from-left {
+#lineCardStyle2 .card:hover .content .from-left {
    left:0%;
 }
 
-.from-bottom{
+#lineCardStyle2 .from-bottom{
   top:100%;
   left:0;
 }
-.card:hover .content .from-bottom {
+#lineCardStyle2 .card:hover .content .from-bottom {
    top:0%;
 }
 
-.from-right{
+#lineCardStyle2 .from-right{
   top:0%;
   right:-100%;
 }
-.card:hover .content .from-right {
+#lineCardStyle2 .card:hover .content .from-right {
    right:0;
 }
 
-.card .content .back h3{
+#lineCardStyle2 .card .content .back h3{
   font-size:15px;
   letter-spacing:2px;
 }
-.card .content .back .tem-img{
+#lineCardStyle2 .card .content .back .tem-img{
   border-radius:100%;
 }
 
-.card .content .back .des{
+#lineCardStyle2 .card .content .back .des{
   font-size:13px;
   padding:20px 0px;
 }
-.card .content .back .social-icon{
+#lineCardStyle2 .card .content .back .social-icon{
   list-style:none;
   margin:0px;
   padding:0px;
 }
-.card .content .back .social-icon li{
+#lineCardStyle2 .card .content .back .social-icon li{
   display:inline-block;
 }
 
-.card .content .back .social-icon li a{
+#lineCardStyle2 .card .content .back .social-icon li a{
   display:block;
   background:#333;
   color:#fff;
@@ -924,7 +934,7 @@ section {
 
 /*--------------------------------------------------------------
 # Featured Services Section
---------------------------------------------------------------*/
+--------------------------------------------------------------
 #service ul.nav-pills{
   width: 100%;
     display: flex;
