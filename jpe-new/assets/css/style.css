@@ -176,12 +176,17 @@ h6 {
   height: 70px;
   top: 60px;
 }
+#header.home-2-header{
+  background:#fff !important;
+}
 
 #header.header-scrolled {
   background: rgba(255 255 255/ 98%);
   top: 0;
 }
 #header.header-scrolled  a,
+#header.home-2-header a,
+#header.home-2-header .logo a,
 #header.header-scrolled  .logo a{
   color:#000;
 }
