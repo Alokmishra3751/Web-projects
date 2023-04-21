@@ -185,9 +185,18 @@ ul{
   justify-content:center;
   align-items:center;
 }
-.illustration img{
-  margin-bottom:30px;
+
+.illustration h5{
+  font-weight:800;
+  font-size:22px;
+  text-align:center;
+  margin-bottom:20px;
 }
+.illus-img{
+  max-width:500px;
+}
+
+
 #abs-enquiry .container-fluid{
   padding-right:0;
   padding-left:0;
@@ -213,11 +222,18 @@ a:hover{
 }
 .get-in-touch h2{
   color:#fff;
-  font-size:45px;
+  font-size:35px;
   margin-bottom:10px;
   font-weight:700;
   text-align:center;
 }
+.iti--separate-dial-code .iti__selected-dial-code{
+  color:#fff;
+}
+.iti__arrow{
+  border-top-color:#fff;
+}
+
 .get-in-touch p{
     color:#ccc;
     font-weight:300;

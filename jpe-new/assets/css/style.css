@@ -11,7 +11,7 @@
 --------------------------------------------------------------*/
 *{
   --color-primary:#f6b024;
-  --color-secondary:#2d3494c7;
+  --color-secondary:#575fab;
 }
 
 body {
@@ -35,7 +35,31 @@ h3,
 h4,
 h5,
 h6 {
+  font-weight:700;
+  margin-bottom:15px;
   font-family: "Raleway", sans-serif;
+}
+
+h2{
+  font-size:50px;
+}
+h3{
+  font-size:40px;
+}
+h4{
+  font-size:30px;
+}
+h5{
+  font-size:25px;
+}
+h6{
+  font-size:20px;
+}
+
+p{
+  font-size:16px;
+  color:#222;
+  margin-bottom:10px;
 }
 
 /*--------------------------------------------------------------
@@ -106,6 +130,33 @@ h6 {
   100% {
     transform: rotate(360deg);
   }
+}
+
+/*  Buttons */
+
+.btn-primary{
+  background:var(--color-primary);
+  color:#fff;
+  font-size:17px;
+  font-weight:500;
+  border-radius:50px;
+  padding:12px 22px;
+  border:0;
+  margin-top:30px;
+}
+.btn-primary.border-w{
+  border:2px solid #fff;
+  background:transparent;
+
+}
+.btn-primary.border-w:hover,
+.btn-primary.border-w:focus{
+  background:#fff;
+  color:#000;
+}
+
+.btn i{
+  margin-left:20px;
 }
 
 /*--------------------------------------------------------------
@@ -661,6 +712,62 @@ h6 {
 
 }
 
+
+/* line-card-info  */
+
+.line-card-info .client-card{
+    height:100%;
+    display: flex;
+    flex-direction:column;
+    padding:30px;
+    border:1px solid #ccc;
+    border-radius: 10px;
+    margin-bottom:30px;
+    justify-content:center;
+}
+.line-card-info .info{
+  border-radius:10px;
+   height:100%;
+    display: flex;
+    flex-direction:column;
+    padding:30px 40px;
+    justify-content:center;
+    align-items:flex-start;
+background-image: linear-gradient(to right, #5001a6, #65009c, #740093, #7f008a, #870682);
+}
+.line-card-info .info h3{
+  font-size:40px;
+  font-weight:800;
+  color:#fff;
+  margin-bottom:30px;
+}
+.line-card-info p{
+  color:#eee;
+}
+
+.line-card-info .client-card ul li{
+  list-style:none;
+  margin:10px 0;
+  font-size:17px;
+}
+.line-card-info .client-card .info-block ul li{
+    font-size:14px;
+    color:#000;
+    font-weight:600;
+    list-style:disc;
+} 
+
+.line-card-info .client-card ul li i{
+  margin-right:10px;
+  font-size:20px;
+  color:var(--color-secondary);
+}
+
+
+.line-card-info .client-card img{
+    max-width:300px;
+    margin-bottom:20px;
+  }
 
 
 /*--------------------------------------------------------------
@@ -2364,6 +2471,13 @@ section {
   padding: 0;
   line-height: 1;
   font-weight: 600;
+}
+#footer .footer-newsletter p{
+  color:#fff;
+}
+
+.footer-top p{
+  color:#fff;
 }
 
 #footer .footer-newsletter form {
