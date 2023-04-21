@@ -720,15 +720,32 @@ p{
     display: flex;
     flex-direction:column;
     padding:30px;
-    border:1px solid #ccc;
-    border-radius: 10px;
+    background:#fff;
+    box-shadow:0 2px 15px 0 rgba(0, 0, 0, 0.2);
+    border-top-left-radius: 10px;
+     border-bottom-left-radius: 10px;
     margin-bottom:30px;
     justify-content:center;
 }
-.line-card-info .info{
+
+.line-card-info .col-md-8,
+.line-card-info .col-md-4{
+    padding:0;
+}
+.line-card-info .info-block{
+  border:1px solid #ccc;
+  padding:20px;
+  margin:30px 0;
   border-radius:10px;
+}
+
+
+.line-card-info .info{
+  border-top-right-radius: 10px;
+     border-bottom-right-radius: 10px;
    height:100%;
     display: flex;
+    box-shadow:0 2px 15px 0 rgba(0, 0, 0, 0.2);
     flex-direction:column;
     padding:30px 40px;
     justify-content:center;
