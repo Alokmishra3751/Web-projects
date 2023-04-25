@@ -1,3 +1,9 @@
+*{
+  --color-blue:#007bff;
+  --color-red:#EA2127;
+}
+
+
 html{
   overflow-x:hidden;
 }
@@ -151,6 +157,36 @@ ul{
     width:130px;
     margin-right:20px;
 }
+.popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  border: 1px solid #ccc;
+  padding: 20px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+  z-index: 9999;
+  opacity:0;
+  transition:all .3s ease-in;
+  visibility:hidden;
+}
+.popup.show-popup{
+    opacity:1;
+    visibility: visible;
+}
+
+.popup h2 {
+  margin-top: 0;
+}
+
+.popup p {
+  margin-bottom: 0;
+}
+
+
+
+
 /*Header*/
 
 
@@ -186,16 +222,13 @@ ul{
   align-items:center;
 }
 
-.illustration h5{
-  font-weight:800;
-  font-size:22px;
-  text-align:center;
-  margin-bottom:20px;
-}
 .illus-img{
   max-width:500px;
 }
-
+.illustration h3{
+  font-weight:400;
+  text-align: center;
+}
 
 #abs-enquiry .container-fluid{
   padding-right:0;
@@ -220,9 +253,13 @@ a:hover{
 	text-decoration:none;
 	color:#fff;
 }
+.get-in-touch select option{
+  color:#000;
+}
+
 .get-in-touch h2{
   color:#fff;
-  font-size:35px;
+  font-size:30px;
   margin-bottom:10px;
   font-weight:700;
   text-align:center;
@@ -290,18 +327,15 @@ a:hover{
   display:flex;
   justify-content:space-between;
   align-items:center;
-  background-color:#5762d5;
-  width:100%;
+  background-color:var(--color-red);
   color: #fff;
-  position:absolute;
-  margin-top:30px;
-  bottom:0;
-  left:0;
+  margin:20px auto;
+  min-width:250px;
   text-transform: uppercase;
   letter-spacing: 2px;
   font-size: 18px;
   text-align:center;
-  padding:14px 30px;
+  padding:14px 20px;
   border: none;
   transition:all .3s ease-in;
   cursor: pointer;

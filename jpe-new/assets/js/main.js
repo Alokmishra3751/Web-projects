@@ -286,4 +286,30 @@
     })
   });
 
+
+  // Form validation and popup
+
+   $('#uploadForm').submit(function(e){
+      e.preventDefault(); // Prevent form submission
+      
+      // Check if all necessary fields are filled out
+      var name = $('#name').val();
+      var email = $('#email').val();
+      var phone = $('#phone').val();
+      
+      if (name && email && phone) {
+        // Display thank you popup message
+        $('#thankyou-popup').fadeIn();
+        
+        // Clear form inputs
+        $('#name').val('');
+        $('#email').val('');
+        $('#phone').val('');
+        $('#upload').val('');
+      } else {
+        // Display error message if not all fields are filled out
+        alert('Please fill out all fields.');
+      }
+    });
+
 })()

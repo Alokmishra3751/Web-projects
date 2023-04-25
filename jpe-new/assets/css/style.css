@@ -61,6 +61,9 @@ p{
   color:#222;
   margin-bottom:10px;
 }
+ul{
+  padding-left:0;
+}
 
 /*--------------------------------------------------------------
 # Back to top button
@@ -95,9 +98,19 @@ p{
   opacity: 1;
 }
 
+.no-overlay:before{
+  background:rgba(0, 0, 0,0.5) !important;
+}
+
 /*--------------------------------------------------------------
 # Preloader
 --------------------------------------------------------------*/
+
+.bg-light{
+  background:#eee;
+}
+
+
 #preloader {
   position: fixed;
   top: 0;
@@ -134,6 +147,8 @@ p{
 
 /*  Buttons */
 
+
+
 .btn-primary{
   background:var(--color-primary);
   color:#fff;
@@ -155,9 +170,36 @@ p{
   color:#000;
 }
 
+.btn-primary.submit-btn{
+  min-width:300px;
+}
+
 .btn i{
   margin-left:20px;
 }
+
+#thankyou-popup {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: #fff;
+      padding: 20px;
+      border: 1px solid #ccc;
+      box-shadow: 0px 0px 10px #ccc;
+      z-index: 9999;
+      display: none;
+    }
+#uploadForm{
+  text-align:center;
+}
+
+button span,
+label span{
+  font-size:13px;
+  vertical-align:middle;
+  margin:0 5px;
+}    
 
 /*--------------------------------------------------------------
 # Disable aos animation delay on mobile devices
@@ -728,15 +770,16 @@ p{
     justify-content:center;
 }
 
-.line-card-info .col-md-8,
-.line-card-info .col-md-4{
+.card-intro .col-md-8,
+.card-intro .col-md-4{
     padding:0;
 }
 .line-card-info .info-block{
-  border:1px solid #ccc;
-  padding:20px;
+  border:1px solid var(--color-primary);
+  padding:20px 40px;
   margin:30px 0;
   border-radius:10px;
+  height:100%;
 }
 
 
@@ -758,7 +801,14 @@ background-image: linear-gradient(to right, #5001a6, #65009c, #740093, #7f008a, 
   color:#fff;
   margin-bottom:30px;
 }
-.line-card-info p{
+.card-intro .client-card p{
+  color:#222;
+  font-weight:600;
+  margin-top:40px;
+  margin-bottom:20px;
+}
+
+.card-intro p{
   color:#eee;
 }
 
@@ -767,11 +817,15 @@ background-image: linear-gradient(to right, #5001a6, #65009c, #740093, #7f008a, 
   margin:10px 0;
   font-size:17px;
 }
+.info-block ul{
+  list-style:disc;
+}
+
 .line-card-info .client-card .info-block ul li{
     font-size:14px;
     color:#000;
     font-weight:600;
-    list-style:disc;
+   
 } 
 
 .line-card-info .client-card ul li i{
