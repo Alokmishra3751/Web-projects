@@ -793,7 +793,7 @@ label span{
     padding:30px 40px;
     justify-content:center;
     align-items:flex-start;
-background-image: linear-gradient(to right, #5001a6, #65009c, #740093, #7f008a, #870682);
+background-image: linear-gradient(to right, #061174, #c18409);
 }
 .line-card-info .info h3{
   font-size:40px;
