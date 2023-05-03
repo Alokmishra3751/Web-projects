@@ -312,4 +312,33 @@
       }
     });
 
+function addRandomNumbers() {
+  var num1 = Math.floor(Math.random() * 21);
+  var num2 = Math.floor(Math.random() * 21);
+  return [num1, num2, num1 + num2];
+}
+
+  // Call the addRandomNumbers() function to generate the random numbers and sum
+  var [num1, num2, sum] = addRandomNumbers();
+  
+  // Select the "num1", "num2", and "result" elements and update their text content with the random numbers and sum
+  $('#num1').text(num1);
+  $('#num2').text(num2);
+  $('#result').text(sum);
+  
+  // Select the "submit" button and attach a click event handler to it
+  $('#VerifyNum').click(function() {
+    // Get the value entered by the user in the "answer" input field
+    var userAnswer = parseInt($('#answer').val());
+    
+    // Check if the user's answer is equal to the sum of the random numbers
+    if (userAnswer === sum) {
+      alert('Congratulations! Your answer is correct.');
+    } else {
+      alert('Sorry, your answer is incorrect. Please try again.');
+    }
+  });
+
+
+
 })()
