@@ -64,6 +64,12 @@ p{
 ul{
   padding-left:0;
 }
+img{
+  max-width:100%;
+  width:100%;
+  height:auto;
+  object-fit:cover;
+}
 
 /*--------------------------------------------------------------
 # Back to top button
@@ -894,9 +900,30 @@ section {
   color: #054a85;
 }
 
+/*  News and updates  */
+.icon-boxes.news-post{
+  padding:80px 0;
+}
+
+.icon-boxes.news-post .icon-box{
+  padding:0;
+}
+
+.icon-boxes.news-post .icon-box .post-content{
+    padding:10px 30px;
+}
+
+.icon-boxes.news-post .icon-box .post-content h4 a,
+.icon-boxes.news-post .icon-box .post-content p{
+    color:#000;
+    margin-bottom:20px;
+}
 /*--------------------------------------------------------------
 # Icon Boxes
 --------------------------------------------------------------*/
+
+
+
 .icon-boxes {
   padding-top: 0;
   position: relative;
@@ -905,6 +932,7 @@ section {
 
 .icon-boxes .icon-box {
   padding: 40px 30px;
+  margin-bottom:30px;
   position: relative;
   overflow: hidden;
   background: #fff;
@@ -946,9 +974,34 @@ section {
 # About Us
 --------------------------------------------------------------*/
 .about {
-  padding: 140px 0;
+  padding: 80px 0;
   background: url("../img/about-bg.png") top center no-repeat;
   position: relative;
+}
+
+.about .col-center{
+  padding-right:40px;
+}
+
+.about .col-center h5{
+    font-size:20px;
+    max-width:350px;
+}
+.about .col-center ul li i{
+  font-size:35px;
+
+}
+
+.about .col-center ul li div{
+  margin-top:30px;
+  padding-left:30px;
+}  
+
+.col-center{
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  height:100%;
 }
 
 .about:before {
@@ -978,10 +1031,6 @@ section {
 .about .content ul li {
   padding-left: 28px;
   position: relative;
-}
-
-.about .content ul li+li {
-  margin-top: 10px;
 }
 
 .about .content ul i {
@@ -1031,6 +1080,7 @@ section {
 .clients .swiper-slide img {
   opacity: 0.5;
   transition: 0.3s;
+
 }
 
 .clients .swiper-slide:hover img {
