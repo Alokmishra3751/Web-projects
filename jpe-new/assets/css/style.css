@@ -21,7 +21,7 @@ body {
 
 a {
   text-decoration: none;
-  color: #0880e8;
+  color: var(--color-primary);
 }
 
 a:hover {
@@ -81,7 +81,7 @@ img{
   right: 15px;
   bottom: 15px;
   z-index: 996;
-  background: #0880e8;
+  background: var(--color-primary);
   width: 40px;
   height: 40px;
   border-radius: 50px;
@@ -133,7 +133,7 @@ img{
   position: fixed;
   top: calc(50% - 30px);
   left: calc(50% - 30px);
-  border: 6px solid #0880e8;
+  border: 6px solid var(--color-primary);
   border-top-color: #bfe0fd;
   border-radius: 50%;
   width: 60px;
@@ -459,7 +459,7 @@ label span{
 .navbar .dropdown ul a:hover,
 .navbar .dropdown ul .active:hover,
 .navbar .dropdown ul li:hover>a {
-  color: #0880e8;
+  color: var(--color-primary);
 }
 
 .navbar .dropdown:hover>ul {
@@ -841,7 +841,8 @@ background-image: linear-gradient(to right, #061174, #c18409);
   margin-bottom:20px;
 }
 
-.card-intro p{
+.card-intro p,
+.card-intro .info li{
   color:#eee;
 }
 
@@ -889,6 +890,11 @@ section {
 .section-title {
   text-align: center;
   padding-bottom: 30px;
+  position:relative;
+}
+.section-title.text-left{
+  text-align:left;
+  padding-right:40px;
 }
 
 .section-title h2 {
@@ -898,6 +904,19 @@ section {
   margin-bottom: 20px;
   padding-bottom: 0;
   color: #054a85;
+}
+.img-box{
+  border-radius:10px;
+  border-top-left-radius:50px;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  position:relative;
+  overflow:hidden;
+}
+.img-box.border-left{
+  border-top-right-radius:50px;
+  border-top-left-radius:10px;
 }
 
 /*  News and updates  */
@@ -1027,6 +1046,42 @@ section {
   list-style: none;
   padding: 0;
 }
+.our-vision .section-title.text-right.col-center{
+  padding-left:40px;
+  text-align:right;
+  align-items:flex-end;
+}
+
+.our-vision .section-title img{
+  width:100px;
+  height:100px;
+  position:relative;
+  z-index:2;
+  margin-bottom:20px;
+
+}
+.our-vision .section-title .icon-box{
+  position:relative;
+}
+.our-vision .section-title .icon-box:before{
+  content:"";
+  position:absolute;
+  top:0;
+  left:-30px;
+  width:130px;
+  height:130px;
+  border-radius:50%;
+  background-color:#f0f2ff;
+  z-index: 0;
+
+}
+.our-vision .section-title h3{
+    font-size:50px;
+    color:var(--color-secondary);
+
+}
+
+
 
 .about .content ul li {
   padding-left: 28px;
@@ -1038,7 +1093,7 @@ section {
   left: 0;
   top: 2px;
   font-size: 20px;
-  color: #0880e8;
+  color: var(--color-primary);
   line-height: 1;
 }
 
@@ -1056,14 +1111,14 @@ section {
   border-radius: 5px;
   transition: 0.3s;
   line-height: 1;
-  color: #0880e8;
+  color: var(--color-primary);
   animation-delay: 0.8s;
   margin-top: 6px;
-  border: 2px solid #0880e8;
+  border: 2px solid var(--color-primary);
 }
 
 .about .content .btn-learn-more:hover {
-  background: #0880e8;
+  background: var(--color-primary);
   color: #fff;
   text-decoration: none;
 }
@@ -1077,10 +1132,18 @@ section {
 /*--------------------------------------------------------------
 # Clients
 --------------------------------------------------------------*/
-.clients .swiper-slide img {
-  opacity: 0.5;
-  transition: 0.3s;
+.clients{
+  padding:50px 0;
+}
 
+.clients .swiper-slide img {
+  transition: 0.3s;
+  opacity:0.4;
+
+}
+.clients .swiper-slide-active img{
+    transform: scale(1.1);
+    opacity:1;
 }
 
 .clients .swiper-slide:hover img {
@@ -1088,7 +1151,7 @@ section {
 }
 
 .clients .swiper-pagination {
-  margin-top: 20px;
+  margin-top: 50px;
   position: relative;
 }
 
@@ -1097,11 +1160,11 @@ section {
   height: 12px;
   background-color: #fff;
   opacity: 1;
-  border: 1px solid #0880e8;
+  border: 1px solid var(--color-primary);
 }
 
 .clients .swiper-pagination .swiper-pagination-bullet-active {
-  background-color: #0880e8;
+  background-color: var(--color-primary);
 }
 
 .clients .owl-item {
@@ -1137,7 +1200,7 @@ section {
 }
 
 .clients .owl-dot.active {
-  background-color: #0880e8 !important;
+  background-color: var(--color-primary) !important;
 }
 
 /*--------------------------------------------------------------
@@ -1208,7 +1271,7 @@ section {
 }
 
 .why-us .accordion-list span {
-  color: #0880e8;
+  color: var(--color-primary);
   font-weight: 600;
   font-size: 18px;
   padding-right: 10px;
@@ -1235,7 +1298,7 @@ section {
 }
 
 .why-us .accordion-list a.collapsed:hover {
-  color: #0880e8;
+  color: var(--color-primary);
 }
 
 .why-us .accordion-list a.collapsed .icon-show {
@@ -1249,7 +1312,7 @@ section {
 .why-us .play-btn {
   width: 94px;
   height: 94px;
-  background: radial-gradient(#0880e8 50%, rgba(8, 128, 232, 0.4) 52%);
+  background: radial-gradient(var(--color-primary) 50%, rgba(8, 128, 232, 0.4) 52%);
   border-radius: 50%;
   display: block;
   position: absolute;
@@ -1292,7 +1355,7 @@ section {
 }
 
 .why-us .play-btn:hover::after {
-  border-left: 15px solid #0880e8;
+  border-left: 15px solid var(--color-primary);
   transform: scale(20);
 }
 
@@ -1375,7 +1438,7 @@ section {
 }
 
 .services .icon-box h4 a:hover {
-  color: #0880e8;
+  color: var(--color-primary);
 }
 
 .services .icon-box p {
@@ -1465,7 +1528,7 @@ section {
 .portfoio #portfolio-flters li:hover,
 .portfoio #portfolio-flters li.filter-active {
   color: #fff;
-  background: #0880e8;
+  background: var(--color-primary);
 }
 
 .portfoio #portfolio-flters li:last-child {
@@ -1491,7 +1554,7 @@ section {
   bottom: -50px;
   z-index: 3;
   transition: all ease-in-out 0.3s;
-  background: #0880e8;
+  background: var(--color-primary);
   padding: 15px 20px;
 }
 
@@ -1556,11 +1619,11 @@ section {
   height: 12px;
   background-color: #fff;
   opacity: 1;
-  border: 1px solid #0880e8;
+  border: 1px solid var(--color-primary);
 }
 
 .portfolio-details .portfolio-details-slider .swiper-pagination .swiper-pagination-bullet-active {
-  background-color: #0880e8;
+  background-color: var(--color-primary);
 }
 
 .portfolio-details .portfolio-info {
@@ -1685,7 +1748,7 @@ section {
 }
 
 .team .member .social a:hover {
-  background: #0880e8;
+  background: var(--color-primary);
   color: #fff;
 }
 
@@ -1718,7 +1781,7 @@ section {
 
 .pricing h4 {
   font-size: 36px;
-  color: #0880e8;
+  color: var(--color-primary);
   font-weight: 600;
   font-family: "Poppins", sans-serif;
   margin-bottom: 20px;
@@ -1750,7 +1813,7 @@ section {
 }
 
 .pricing ul i {
-  color: #0880e8;
+  color: var(--color-primary);
   font-size: 18px;
   padding-right: 4px;
 }
@@ -1768,7 +1831,7 @@ section {
 }
 
 .pricing .btn-buy {
-  background: #0880e8;
+  background: var(--color-primary);
   display: inline-block;
   padding: 8px 35px 10px 35px;
   border-radius: 50px;
@@ -1787,7 +1850,7 @@ section {
 
 .pricing .featured h3 {
   color: #fff;
-  background: #0880e8;
+  background: var(--color-primary);
 }
 
 .pricing .advanced {
@@ -1799,7 +1862,7 @@ section {
   z-index: 1;
   font-size: 14px;
   padding: 1px 0 3px 0;
-  background: #0880e8;
+  background: var(--color-primary);
   color: #fff;
 }
 
@@ -1868,7 +1931,7 @@ section {
 }
 
 .faq .faq-list a.collapsed:hover {
-  color: #0880e8;
+  color: var(--color-primary);
 }
 
 .faq .faq-list a.collapsed .icon-show {
@@ -1960,7 +2023,7 @@ section {
 
 .contact .info i {
   font-size: 20px;
-  background: #0880e8;
+  background: var(--color-primary);
   color: #fff;
   float: left;
   width: 44px;
@@ -2068,15 +2131,15 @@ section {
 .contact .php-email-form button[type=submit] {
   border: 0;
   padding: 10px 32px;
-  color: #0880e8;
+  color: var(--color-primary);
   transition: 0.4s;
   border-radius: 50px;
-  border: 2px solid #0880e8;
+  border: 2px solid var(--color-primary);
   background: #fff;
 }
 
 .contact .php-email-form button[type=submit]:hover {
-  background: #0880e8;
+  background: var(--color-primary);
   color: #fff;
 }
 
@@ -2260,7 +2323,7 @@ section {
   top: 0;
   bottom: 0;
   width: 3px;
-  background-color: #0880e8;
+  background-color: var(--color-primary);
   margin-top: 20px;
   margin-bottom: 20px;
 }
@@ -2340,7 +2403,7 @@ section {
   font-size: 22px;
   margin-bottom: 0px;
   padding: 0;
-  color: #0880e8;
+  color: var(--color-primary);
 }
 
 .blog .blog-author .social-links {
@@ -2395,7 +2458,7 @@ section {
 
 .blog .blog-comments .comment h5 .reply {
   padding-left: 10px;
-  color: #0880e8;
+  color: var(--color-primary);
 }
 
 .blog .blog-comments .comment h5 .reply i {
@@ -2458,7 +2521,7 @@ section {
   border-radius: 4px;
   padding: 10px 20px;
   border: 0;
-  background-color: #0880e8;
+  background-color: var(--color-primary);
 }
 
 .blog .blog-comments .reply-form .btn-primary:hover {
@@ -2466,7 +2529,7 @@ section {
 }
 
 .blog .blog-pagination {
-  color: #0880e8;
+  color: var(--color-primary);
 }
 
 .blog .blog-pagination ul {
@@ -2482,7 +2545,7 @@ section {
 }
 
 .blog .blog-pagination li a {
-  color: #0880e8;
+  color: var(--color-primary);
   padding: 7px 16px;
   display: flex;
   align-items: center;
@@ -2627,7 +2690,7 @@ section {
 }
 
 .blog .sidebar .tags ul a {
-  color: #0880e8;
+  color: var(--color-primary);
   font-size: 14px;
   padding: 6px 14px;
   margin: 0 6px 8px 0;
@@ -2653,9 +2716,11 @@ section {
 --------------------------------------------------------------*/
 #footer {
   background: #05579e;
-  padding: 0 0 30px 0;
   color: #fff;
   font-size: 14px;
+}
+.footer-bottom{
+  padding:20px 0;
 }
 
 #footer .footer-newsletter {
@@ -2709,7 +2774,7 @@ section {
 }
 
 #footer .footer-newsletter form input[type=submit]:hover {
-  background: #0880e8;
+  background: var(--color-primary);
 }
 
 #footer .footer-top {
@@ -2804,27 +2869,42 @@ section {
 #footer .footer-top .footer-links ul a:hover {
   color: #fff;
 }
+#footer .footer-top .footer-contact i{
+  margin-right:10px;
+
+}  
 
 #footer .footer-top .footer-contact {
   margin-bottom: 30px;
 }
 
 #footer .footer-top .footer-contact p {
-  line-height: 26px;
+  line-height: 20px;
+  font-size:14px;
+}
+.footer-bottom p{
+  margin-bottom:0;
 }
 
 #footer .copyright {
-  text-align: center;
-  padding-top: 30px;
+  font-size:12px;
+  
 }
 
 #footer .credits {
-  padding-top: 5px;
   text-align: center;
   font-size: 13px;
   color: #fff;
 }
+.footer-bottom .privacy-links{
+  text-align:right;
+}
+.footer-bottom .privacy-links a{
+  margin-left:20px;
+  font-size:13px;
+  color:#eee;
+}
 
 #footer .credits a {
-  color: #f6b024;
+  color:var(--color-primary);
 }
