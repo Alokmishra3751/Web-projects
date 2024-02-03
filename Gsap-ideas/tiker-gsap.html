@@ -1,0 +1,138 @@
+<html lang="en-US">
+  <head>
+
+    <title>Main SeriAmigo</title>
+    <meta charset="utf-8">
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'
+    />
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://fonts.googleapis.com/css2?family=Bona+Nova&display=swap" rel="stylesheet">
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+  
+  <style>
+   .wrapper{
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  width:100%;
+  height:120vh;
+  overflow-x:hidden;
+}
+  
+
+
+  /* Styling for the ticker and titles */
+  .ticker-wrapper {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    height: 50px; /* Adjust the height as needed */
+    background-color: #f0f0f0;
+  }
+
+  .ticker {
+    display: flex;
+    position: absolute;
+    white-space: nowrap;
+    top: 0;
+    left: 100%; /* Start the ticker off-screen to the right */
+    margin: 0;
+    padding: 0;
+    animation: ticker-slide linear infinite;
+  }
+
+  .ticker li {
+    margin-right: 40px; /* Adjust the spacing between titles */
+    display: inline-block;
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+  }
+
+  @keyframes ticker-slide {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+</style> 
+
+  
+  </head>
+
+
+<body>
+
+<div class="wrapper">
+<div class="ticker-wrapper">
+  <ul class="ticker">
+    <li>Title 1</li>
+    <li>Title 2</li>
+    <li>Title 3</li>
+    <li>Title 4</li>
+    <li>Title 5</li>
+  </ul>
+</div>
+</div>
+
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.0-beta1/js/bootstrap.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.slim.min.js" integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.0/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.0/ScrollTrigger.min.js"></script>
+
+
+
+
+<script type="text/javascript">
+  // Import the ScrollTrigger plugin
+  gsap.registerPlugin(ScrollTrigger);
+
+  // Function to update the ticker animation speed based on scroll position
+  function updateAnimationSpeed() {
+    var scrollY = window.scrollY || window.pageYOffset;
+    var speed = 1 + scrollY * 0.01; // Adjust the multiplier to control speed increase
+    gsap.to(".ticker", { duration: speed, xPercent: -100, ease: "none" });
+  }
+
+  // Add an event listener to update the animation speed on scroll
+  window.addEventListener("scroll", updateAnimationSpeed);
+
+  // Setup ScrollTrigger
+  ScrollTrigger.matchMedia({
+    "(min-width: 0px)": function () {
+      // Animation for screens of all sizes
+
+      // Function to update the animation duration based on the scroll position
+      function updateAnimationDuration() {
+        var scrollY = window.scrollY || window.pageYOffset;
+        var newDuration = 5 - scrollY * 0.01; // Adjust the multiplier to control speed increase
+        gsap.to(".ticker", { duration: newDuration, xPercent: -100, ease: "none" });
+      }
+
+      // Add a ScrollTrigger to control the animation duration
+      ScrollTrigger.create({
+        trigger: ".wrapper",
+        start: "top top",
+        end: "bottom bottom",
+        onUpdate: updateAnimationDuration,
+        autoKill: false, // Prevent the ticker from being auto-killed by ScrollTrigger
+      });
+    },
+  });
+
+
+</script>
+
+</body>
+
+</html>

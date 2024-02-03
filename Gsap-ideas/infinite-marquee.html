@@ -1,7 +1,28 @@
+<html lang="en-US">
+  <head>
+
+    <title>Main SeriAmigo</title>
+    <meta charset="utf-8">
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'
+    />
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://fonts.googleapis.com/css2?family=Bona+Nova&display=swap" rel="stylesheet">
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+   
+
+  
+  </head>
 
 
-
-
+<body>
+<div class="wrapper">  
 <div class="tickerwrapper">
    <ul class='list'>
       <li class='listitem'>
@@ -51,6 +72,7 @@
       </li>
   </ul>
 </div>
+</div>
 
 <style>
 
@@ -72,6 +94,15 @@ p {
   padding: 0;
   font-family: verdana;
   font-size: 16pt;
+}
+
+.wrapper{
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  width:100%;
+  height:120vh;
+  overflow-x:hidden;
 }
 
 .tickerwrapper {
@@ -110,41 +141,78 @@ ul.list li {
 </style>
 
 
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.0-beta1/js/bootstrap.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.slim.min.js" integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.0/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.0/ScrollTrigger.min.js"></script>
 
 
-var $tickerWrapper = $(".tickerwrapper");
-var $list = $tickerWrapper.find("ul.list");
-var $clonedList = $list.clone();
-var listWidth = 10;
+<script type="text/javascript">
+  gsap.registerPlugin(ScrollTrigger);
 
-$list.find("li").each(function (i) {
-      listWidth += $(this, i).outerWidth(true);
-});
+// Your existing code
+  var $tickerWrapper = $(".tickerwrapper");
+  var $list = $tickerWrapper.find("ul.list");
+  var $clonedList = $list.clone();
+  var listWidth = 10;
 
-var endPos = $tickerWrapper.width() - listWidth;
+  $list.find("li").each(function (i) {
+    listWidth += $(this, i).outerWidth(true);
+  });
 
-$list.add($clonedList).css({
-  "width" : listWidth + "px"
-});
+  var endPos = $tickerWrapper.width() - listWidth;
 
-$clonedList.addClass("cloned").appendTo($tickerWrapper);
+  $list.add($clonedList).css({
+    "width": listWidth + "px",
+  });
 
-//TimelineMax
-var infinite = new TimelineMax({repeat: -1, paused: true});
-var time = 40;
+  $clonedList.addClass("cloned").appendTo($tickerWrapper);
 
-infinite
-  .fromTo($list, time, {rotation:0.01,x:0}, {force3D:true, x: -listWidth, ease: Linear.easeNone}, 0)
-  .fromTo($clonedList, time, {rotation:0.01, x:listWidth}, {force3D:true, x:0, ease: Linear.easeNone}, 0)
-  .set($list, {force3D:true, rotation:0.01, x: listWidth})
-  .to($clonedList, time, {force3D:true, rotation:0.01, x: -listWidth, ease: Linear.easeNone}, time)
-  .to($list, time, {force3D:true, rotation:0.01, x: 0, ease: Linear.easeNone}, time)
-  .progress(1).progress(0)
-  .play();
+  //TimelineMax
+  var infinite = new TimelineMax({ repeat: -1, paused: true });
+  var time = 40;
 
-//Pause/Play    
-$tickerWrapper.on("mouseenter", function(){
-  infinite.pause();
-}).on("mouseleave", function(){
-  infinite.play();
-});
+  infinite
+    .fromTo($list, time, { rotation: 0.01, x: 0 }, { force3D: true, x: -listWidth, ease: Linear.easeNone }, 0)
+    .fromTo($clonedList, time, { rotation: 0.01, x: listWidth }, { force3D: true, x: 0, ease: Linear.easeNone }, 0)
+    .set($list, { force3D: true, rotation: 0.01, x: listWidth })
+    .to($clonedList, time, { force3D: true, rotation: 0.01, x: -listWidth, ease: Linear.easeNone }, time)
+    .to($list, time, { force3D: true, rotation: 0.01, x: 0, ease: Linear.easeNone }, time)
+    .progress(1)
+    .progress(0)
+    .play();
+
+  //Pause/Play
+  $tickerWrapper.on("mouseenter", function () {
+    infinite.pause();
+  }).on("mouseleave", function () {
+    infinite.play();
+  });
+
+  // Add ScrollTrigger interactivity
+  var scrollTriggerTimeline = new TimelineMax({ repeat: -1, paused: true });
+  var initialSpeed = 40;
+
+  function updateAnimationSpeed() {
+    var scrollY = window.scrollY || window.pageYOffset;
+    var speed = initialSpeed - scrollY * 0.1; // Adjust the multiplier to control speed increase
+    scrollTriggerTimeline.timeScale(speed / initialSpeed);
+  }
+
+  window.addEventListener("scroll", updateAnimationSpeed);
+
+  ScrollTrigger.create({
+    trigger:'.wrapper', // The DOM element that triggers the animation
+    animation: scrollTriggerTimeline, // The timeline to be played
+    start: "top top", // Animation starts when the top of the trigger element is at the top of the viewport
+    end: "bottom bottom", // Animation ends when the bottom of the trigger element is at the bottom of the viewport
+    scrub: true, // Smoothing effect when scrolling, making it smoother when the user scrolls
+  });
+
+
+
+</script>
+
+</body>
+
+</html>
